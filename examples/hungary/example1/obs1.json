@@ -1,0 +1,49 @@
+      {
+        "resourceType": "Observation",
+        "id": "obs1",
+        "text": {
+          "status": "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">TSH Supersens. meghat. 1.468 mU/L<div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3",
+              "display": "Thyrotropin [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat1"
+        },
+        "performer": [
+          {
+            "reference": "Organization/164482",
+            "display": "Semmelweis Egyetem"
+          }
+        ],
+        "valueQuantity": {
+          "value": 1.468,
+          "unit": "mU/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mU/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.350,
+              "unit": "mU/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "mU/L"
+            },
+            "high": {
+              "value": 4.940,
+              "unit": "mU/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "mU/L"
+            }
+          }
+        ]
+      }

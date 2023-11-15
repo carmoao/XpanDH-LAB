@@ -1,0 +1,56 @@
+      {
+        "resourceType": "Observation",
+        "id": "obs3",
+        "text": {
+          "status": "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">T3 szabadfrakció meghat. 5.90 pmol/L<div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14928-6",
+              "display": "Triiodothyronine (T3) Free [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat1"
+        },
+        "performer": [
+          {
+            "reference": "Organization/164482",
+            "display": "Semmelweis Egyetem"
+          }
+        ],
+        "valueQuantity": {
+          "value": 5.90,
+          "unit": "pmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "pmol/L"
+        },
+        "interpretation" : [{
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+              "code" : "H",
+              "display" : "High"
+            }]
+          }],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 2.63,
+              "unit": "pmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "pmol/L"
+            },
+            "high": {
+              "value": 5.7,
+              "unit": "pmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "pmol/L"
+            }
+          }
+        ]
+      }

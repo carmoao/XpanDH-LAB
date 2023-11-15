@@ -1,0 +1,47 @@
+{
+  "resourceType" : "Organization",
+  "id" : "org1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Semmelweis Egyetem Laboratóriumi Medicina Intézet Központi Laboratórium (Pest)</div>"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "system" : "antsz.hu/euszolg_engedely",
+    "value" : "014025016"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "urn:oid:2.16.840.1.113883.2.4.15.1060",
+      "code" : "V6",
+      "display" : "University Medical Hospital"
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "prov",
+      "display" : "Healthcare Provider"
+    }]
+  }],
+  "name" : "Semmelweis Egyetem Laboratóriumi Medicina Intézet Központi Laboratórium (Pest)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+36-1-210-0278/62098",
+      "use" : "work"
+    },
+    {
+      "system" : "email",
+      "value" : "kplabor.lmi@med.semmelweis-univ.hu",
+      "use" : "work"
+    }]
+  },
+  {
+    "address" : {
+      "use" : "work",
+      "line" : ["Üllõi út 78. B épület I. emelet"],
+      "city" : "Budapest",
+      "postalCode" : "1082",
+      "country" : "HU"
+    }
+  }]
+}

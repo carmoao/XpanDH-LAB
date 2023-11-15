@@ -1,0 +1,49 @@
+      {
+        "resourceType": "Observation",
+        "id": "obs2",
+        "text": {
+          "status": "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">T4 szabadfrakció meghat. 12.56 pmol/L<div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14920-3",
+              "display": "Thyroxine (T4) free [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat1"
+        },
+        "performer": [
+          {
+            "reference": "Organization/164482",
+            "display": "Semmelweis Egyetem"
+          }
+        ],
+        "valueQuantity": {
+          "value": 12.56,
+          "unit": "pmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "pmol/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value":  9.00,
+              "unit": "pmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "pmol/L"
+            },
+            "high": {
+              "value": 23.20,
+              "unit": "pmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "pmol/L"
+            }
+          }
+        ]
+      }

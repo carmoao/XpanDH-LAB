@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "pract1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Ezesez Geza</div>"
+  },
+  "identifier" : [{
+    "system" : "enkk.hu/orvos",
+    "value" : "00000"
+  }],
+  "name" : [{
+    "family" : "Ezesez",
+    "given" : ["Geza"],
+    "suffix" : ["Dr."]
+  }]
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "example",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Ezesez Geza<div>"
+  },
+  "identifier" : [{
+    "system" : "antsz.hu/henyir",
+    "value" : "164482-00000"
+  }],
+  "active" : true,
+  "practitioner" : {
+    "reference" : "Practitioner/pract1",
+    "display" : "Dr Ezesez Geza"
+  },
+  "organization" : {
+    "reference" : "Organization/014023003"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0286",
+      "code" : "RT"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "antsz.hu/szakmakod",
+      "code" : "0103",
+      "display" : "endokrinológia, anyagcsere és diabetológia"
+    }]
+  }]
+}

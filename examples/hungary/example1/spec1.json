@@ -1,0 +1,28 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "spec1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">0.04 PIROSKUP</div>"
+  },
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119364003",
+      "display" : "Serum sample"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pat1"
+  }],
+  "collection" : {
+    "collectedDateTime" : "2020-06-09T09:25Z",
+    "quantity" : 0.04
+  },
+  "container" : [{
+    "device" : {
+      "reference" : "Device/dev1"
+    },
+    "specimenQuantity" : 0.04;
+  }]
+}

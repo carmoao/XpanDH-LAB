@@ -1,0 +1,23 @@
+  "location" : [{
+    "reference" : "Location/164482/002",
+    "display" : "1082 Budapest, Baross utca 23."
+  }],
+  "contact" : [{
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+36-1-210-0278/62098",
+      "use" : "work"
+    },
+    {
+      "system" : "email",
+      "value" : "kplabor.lmi@med.semmelweis-univ.hu",
+      "use" : "work"
+    }]
+  }],
+  "characteristic" : [{
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/service-mode",
+      "code" : "in-person",
+      "display" : "In Person"
+    }]
+  }],

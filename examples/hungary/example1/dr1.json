@@ -1,0 +1,61 @@
+{
+      "resource" : {
+        "resourceType" : "DiagnosticReport",
+        "id" : "dr1",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+        },
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+            "valueReference" : {
+              "reference" : "Composition/comp1"
+            }
+          }
+        ],
+        "status" : "registered",
+        "category" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://loinc.org",
+                "code" : "18719-5",
+                "display" : "Chemistry studies (set)"
+              }
+            ]
+          }
+        ],
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "11502-2",
+              "display" : "Laboratory report"
+            }
+          ]
+        },
+        "subject" : {
+          "reference" : "Patient/pat1"
+        },
+        "specimen" : [
+          {
+            "reference" : "Specimen/spec1"
+          }
+        ],
+        "result" : [
+          {
+            "reference" : "Observation/obs1"
+          },
+          {
+            "reference" : "Observation/obs2"
+          },
+          {
+            "reference" : "Observation/obs3"
+          },
+          {
+            "reference" : "Observation/obs4"
+          }
+        ]
+      }
+    }

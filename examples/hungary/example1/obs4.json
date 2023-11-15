@@ -1,0 +1,50 @@
+      {
+        "resourceType": "Observation",
+        "id": "obs4",
+        "text": {
+          "status": "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">ATPO 6.83 U/mL<div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8099-4",
+              "display": "Thyroperoxidase Ab [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat1"
+        },
+        "performer": [
+          {
+            "reference": "Organization/164482",
+            "display": "Semmelweis Egyetem"
+          }
+        ],
+        "valueQuantity": {
+          "value": 6.83,
+          "unit": "U/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/mL"
+        },
+        "interpretation" : [{
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+              "code" : "H",
+              "display" : "High"
+            }]
+          }],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 5.6,
+              "unit": "U/mL",
+              "system": "http://unitsofmeasure.org",
+              "code": "U/mL"
+            }
+          }
+        ]
+      }

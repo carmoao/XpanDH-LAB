@@ -1,0 +1,17 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "req1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pajzsmirigy panel</div>"
+  },
+  "status" : "active",
+  "intent" : "original-order",
+  "subject" : {
+    "reference" : "Patient/pat1"
+  },
+  "occurrenceDateTime" : "2020-06-09",
+  "requester" : {
+    "reference" : "PractitionerRole/pr1"
+  }
+}
