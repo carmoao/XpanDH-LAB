@@ -6,6 +6,11 @@
     No liability can be inferred from the use or misuse of this specification, or its consequences.</p>
   </blockquote>
 
+  <blockquote class="stu-note">
+    <p>This specification has been created to assist the work of the pilots for the XpanDH exprimentation bubbles and contribute to the development of the European Laboratory Report FHIR IG.</p>
+    <p>This guide is not supposed to substitute or overrules <b>the reference guide</b> for this domain that is the <b><a href="https://hl7.eu/fhir/laboratory/">HL7 Europe Laboratory Report FHIR IG</a></b>
+  </blockquote>
+
   <a name="scope"></a>
   <h3>Scope</h3>
   <p>
