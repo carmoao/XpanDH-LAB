@@ -18,9 +18,7 @@
 
   <blockquote class="dragon">
     <p>This specification has been created to contribute to the development of the European EHRxF for this domain.</p>
-    <p>This guide is not intended to replace or override <b>the general reference guide</b> for this domain that is the <b>
-      <a href="https://hl7.eu/fhir/laboratory/">HL7 Europe Laboratory Report FHIR IG</a> or any other Implementation Guide that will be specified by MyHealth@Eu and/or JA-09
-    </b>
+    <p><b>This guide is not intended to replace or override the <a href="https://hl7.eu/fhir/laboratory/">HL7 Europe Laboratory Report FHIR IG</a> or any other Implementation Guide that will be specified by MyHealth@Eu and/or JA-09</b>    
   </p>
 </blockquote>
 
