@@ -4,5 +4,5 @@ Id: ServiceRequest-lab-xpandh
 Title: "ServiceRequest: Laboratory Order"
 Description: "ServiceRequest used to represent a Laboratory Order for the scope of the XPanDH project."
 
-* subject only Reference (PatientXpandh)
-* specimen	only Reference (SpecimenXpandh)
+* subject only Reference (PatientLabXpandh)
+// * specimen	only Reference (SpecimenXpandh)

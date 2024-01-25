@@ -10,5 +10,5 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * entry[composition].resource only CompositionLabReportXpandh
 * entry[diagnosticReport].resource only DiagnosticReportLabXpandh
-* entry[patient].resource only PatientXpandh
+* entry[patient].resource only PatientLabXpandh
 * entry[serviceRequest].resource only ServiceRequestLabXpandh
