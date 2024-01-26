@@ -9,7 +9,7 @@
   <a name="scope"></a>
   <h3>Scope</h3>
   <p>
-    This is the Laboratory Report HL7 FHIR Implementation Guide for the XPanDH project, created to assist the work of the pilots for the <a href="https://build.fhir.org/ig/hl7-eu/xpandh/output/index.html#adoption-domains">XpanDH experimentation bubbles</a>.
+    This is the Laboratory Report HL7 FHIR Implementation Guide for the XPanDH project, created to assist the work of the pilots for the <a href="https://build.fhir.org/ig/hl7-eu/xpandh/index.html#adoption-domains">XpanDH experimentation bubbles</a>.
   </p>
 
 
@@ -18,66 +18,67 @@
 
   <blockquote class="dragon">
     <p>This specification has been created to contribute to the development of the European EHRxF for this domain.</p>
-    <p><b>This guide is not intended to replace or override the <a href="https://hl7.eu/fhir/laboratory/">HL7 Europe Laboratory Report FHIR IG</a> or any other Implementation Guide that will be specified by MyHealth@Eu and/or JA-09</b>    
-  </p>
-</blockquote>
+    <p>
+      <b>This guide is not intended to replace or override the <a href="https://hl7.eu/fhir/laboratory/">HL7 Europe Laboratory Report FHIR IG</a> or any other Implementation Guide that will be specified by MyHealth@Eu and/or JA-09</b>
+    </p>
+  </blockquote>
 
- <a name="other-guides"></a>
+  <a name="other-guides"></a>
   <h4>Relationships with other guides</h4>
-<p>
+  <p>
     The following figure provides an overview of the general development approach and the relationships of this guide with the HL7 Europe and MyHealth@EU Laboratory Report FHIR IGs
-</p>
+  </p>
 
-<div>
-  <img src="overview.png" alt="Overview" width="80%"/>
-  <p>Figure 1 - Overview</p>
+  <div>
+    <img src="overview.png" alt="Overview" width="80%"/>
+    <p>Figure 1 - Overview</p>
+    <p></p>
+  </div>
+
   <p></p>
-</div>
-
-<p> </p>
-<p>
+  <p>
   This guide has been created to support the development of the  European EHRxF for the laboratory domain and not for specifying rules to be used for real systems. Other guides taking advantage of the work of this project are supposed to take this role (e.g MyHealth@EU specification for cross-border services).
-</p>
+  </p>
 
-<p>A continuos co-creation and alignement work has been established for these three guides:
-  <ul>
-    <li>The HL7 Europe Laboratory Guide acts as common parent for any EU guide on this domain</li>
-    <li>The on-develop MyHealth@EU specifies how to use the report in the context of the cross-border exchange</li>
-    <li>This guide - derived from the EU one - is used to experiment solutions and rules for being used by the XpanDH communities</li>
-        <li>Findings collected and solutions experimented by the XpanDH communities are feedback to the HL7 Europe project.</li>
-    <li>When specifications are incorporated in the HL7 Europe guide; the associated rules are removed from this guide being inherited from the parent guide.</li>
-    <li>As applicable, the MyHealth@EU and this guides are kept aligned</li>
-  </ul>
-</p>
-
-
-<a name="project"></a>
-<h4>The project</h4>
-An overview of the project - including the description of some of the used concepts - is provided in the <a href="https://build.fhir.org/ig/hl7-eu/xpandh/output/index.html"> General XpanDH FHIR IG.</a>
+  <p>A continuos co-creation and alignement work has been established for these three guides:
+    <ul>
+      <li>The HL7 Europe Laboratory Guide acts as common parent for any EU guide on this domain</li>
+      <li>The on-develop MyHealth@EU specifies how to use the report in the context of the cross-border exchange</li>
+      <li>This guide - derived from the EU one - is used to experiment solutions and rules for being used by the XpanDH communities</li>
+      <li>Findings collected and solutions experimented by the XpanDH communities are feedback to the HL7 Europe project.</li>
+      <li>When specifications are incorporated in the HL7 Europe guide; the associated rules are removed from this guide being inherited from the parent guide.</li>
+      <li>As applicable, the MyHealth@EU and this guides are kept aligned</li>
+    </ul>
+  </p>
 
 
-<a name="dependencies"></a>
-<h3>Dependencies</h3>
+  <a name="project"></a>
+  <h4>The project</h4>
+An overview of the project - including the description of some of the used concepts - is provided in the <a href="https://build.fhir.org/ig/hl7-eu/xpandh/index.html"> General XpanDH FHIR IG.</a>
+
+
+  <a name="dependencies"></a>
+  <h3>Dependencies</h3>
 
 {% include dependency-table.xhtml %}
 
-<a name="x-versions"></a>
-<h3>Cross Version Analysis</h3>
+  <a name="x-versions"></a>
+  <h3>Cross Version Analysis</h3>
 
 {% include cross-version-analysis.xhtml %}
 
-<a name="global"></a>
-<h3>Global Profiles</h3>
+  <a name="global"></a>
+  <h3>Global Profiles</h3>
 
 {% include globals-table.xhtml %}
 
-<a name="ip-statements"></a>
-<h3>IP Statements</h3>
+  <a name="ip-statements"></a>
+  <h3>IP Statements</h3>
 
 {% include ip-statements.xhtml %}
 
-<a name="authors"></a>
-<h3>Authors and Contributors</h3>
+  <a name="authors"></a>
+  <h3>Authors and Contributors</h3>
 
 
 </div>
