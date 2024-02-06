@@ -1,0 +1,1484 @@
+{
+    resourceType: "Bundle",
+    entry: [
+        {
+    fullUrl: "urn:uuid:8c3fa05f-e57c-40cb-add1-fcf307df7bbc",
+    resource: {
+    resourceType: "Composition",
+    author: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    date: "2023-08-04T13:33:40.436+02:00",
+    id: "8c3fa05f-e57c-40cb-add1-fcf307df7bbc",
+    identifier: {
+    system: https: //cgm.com/MOLIS,
+    value: "82470091998.013G050049.l.2.MOLIS"
+                },
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition
+                    ]
+                },
+    section: [
+                    {
+    entry: [
+                            {
+    reference: "DiagnosticReport/16162fcb-cef5-47f0-a592-d3b92c94a714"
+                            }
+                        ]
+                    }
+                ],
+    status: "final",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                },
+    title: "Laboratoriumrapport",
+    type: {
+    coding: [
+                        {
+    code: "11502-2",
+    display: "Laboratory report",
+    system: http: //loinc.org
+                        }
+                    ],
+    text: "Laboratoriumrapport"
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:16162fcb-cef5-47f0-a592-d3b92c94a714",
+    resource: {
+    resourceType: "DiagnosticReport",
+    basedOn: [
+                    {
+    reference: "ServiceRequest/9f52d93a-d0e4-4c6c-9fee-e6bf228132c4"
+                    }
+                ],
+    category: [
+                    {
+    coding: [
+                            {
+    code: "LAB",
+    display: "Laboratory",
+    system: http: //terminology.hl7.org/CodeSystem/v2-0074
+                            }
+                        ]
+                    }
+                ],
+    code: {
+    coding: [
+                        {
+    code: "11502-2",
+    display: "Laboratory report",
+    system: http: //loinc.org
+                        }
+                    ],
+    text: "Laboratoriumrapport"
+                },
+    id: "16162fcb-cef5-47f0-a592-d3b92c94a714",
+    identifier: [
+                    {
+    system: https: //www.ehealth.fgov.be/lab-report/diagnostic-report-id,
+    value: "82470091998.013G050049.l.2.MOLIS"
+                    }
+                ],
+    issued: "2023-07-31T11:42:20+02:00",
+    language: "nl",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report
+                    ],
+    versionId: "2"
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    presentedForm: [
+                    {
+    contentType: "application/pdf",
+    data: "JVBERi0xLjQNCiXi48/TDQolDQold1BERjQgYnkgV1BDdWJlZCBHbWJIICg0MzIp
+    LCAgMzJiaXQgIHVuaWNvZGUgDQolDQolDQoyIDAgb2JqDQo8PC9UeXBlL01ldGFk
+    YXRhL1N1YnR5cGUvWE1ML0xlbmd0aCAxNTAzID4+DQpzdHJlYW0NCjw/eHBhY2tl
+    dCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4
+    OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IjMuMS03
+    MDEiPgo8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv
+    MDIvMjItcmRmLXN5bnRheC1ucyMiPgo8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91
+    dD0iIgogeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIj4K
+    IDx4bXA6Q3JlYXRvclRvb2w+Y29tYml0JiMxNzQ7IExpc3QgJmFtcDsgTGFiZWwm
+    IzE3NDsgUmVwb3J0IEdlbmVyYXRvciAoMjUuMy4wLjApPC94bXA6Q3JlYXRvclRv
+    b2w+CiA8eG1wOkNyZWF0ZURhdGU+MjAyMy0wOC0wNFQxNDozMjoyOVo8L3htcDpD
+    cmVhdGVEYXRlPgogPHhtcDpNb2RpZnlEYXRlPjIwMjMtMDgtMDRUMTQ6MzI6Mjla
+    PC94bXA6TW9kaWZ5RGF0ZT4KIDx4bXA6TWV0YWRhdGFEYXRlPjIwMjMtMDgtMDRU
+    MTQ6MzI6MjlaPC94bXA6TWV0YWRhdGFEYXRlPgo8L3JkZjpEZXNjcmlwdGlvbj4K
+    PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKIHhtbG5zOmRjPSJodHRwOi8v
+    cHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+CiA8ZGM6Zm9ybWF0PmFwcGxpY2F0
+    aW9uL3BkZjwvZGM6Zm9ybWF0PgogPGRjOnRpdGxlPgogPHJkZjpBbHQ+CiAgPHJk
+    ZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5MaXN0ICZhbXA7IExhYmVsIFJlcG9y
+    dDwvcmRmOmxpPgogPC9yZGY6QWx0PjwvZGM6dGl0bGU+CiA8ZGM6ZGVzY3JpcHRp
+    b24+PHJkZjpBbHQ+CiAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+Cjwv
+    cmRmOkFsdD48L2RjOmRlc2NyaXB0aW9uPgogPGRjOnN1YmplY3Q+CiA8cmRmOkJh
+    Zz4KICA8cmRmOmxpLz4KIDwvcmRmOkJhZz4KPC9kYzpzdWJqZWN0PgogPGRjOmNy
+    ZWF0b3I+PHJkZjpTZXE+CiAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+
+    CjwvcmRmOlNlcT48L2RjOmNyZWF0b3I+CjwvcmRmOkRlc2NyaXB0aW9uPgo8cmRm
+    OkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogeG1sbnM6eGFwTU09Imh0dHA6Ly9u
+    cy5hZG9iZS5jb20veGFwLzEuMC9tbS8iPgogPHhhcE1NOlZlcnNpb25JRD4xPC94
+    YXBNTTpWZXJzaW9uSUQ+CiA8eGFwTU06RG9jdW1lbnRJRD51dWlkOjRjNjFjYWMy
+    OWVhOTdhNGU5MDhhMmQzYmY3YzE1MTllPC94YXBNTTpEb2N1bWVudElEPgogPHhh
+    cE1NOkluc3RhbmNlSUQ+dXVpZDo0YzYxY2FjMjllYTk3YTRlOTA4YTJkM2JmN2Mx
+    NTE5ZTwveGFwTU06SW5zdGFuY2VJRD4KPC9yZGY6RGVzY3JpcHRpb24+CjxyZGY6
+    RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiB4bWxuczpwZGY9Imh0dHA6Ly9ucy5h
+    ZG9iZS5jb20vcGRmLzEuMy8iPgogPHBkZjpLZXl3b3Jkcy8+CiA8cGRmOlByb2R1
+    Y2VyPndQREY0IGJ5IFdQQ3ViZWQgR21iSDwvcGRmOlByb2R1Y2VyPgo8L3JkZjpE
+    ZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KPD94cGFja2V0IGVu
+    ZD0idyI/Pg0KZW5kc3RyZWFtDQplbmRvYmoNCjEgMCBvYmoNCjw8DQovQ3JlYXRv
+    cij+/wBjAG8AbQBiAGkAdACuACAATABpAHMAdAAgACYAIABMAGEAYgBlAGwArgAg
+    AFIAZQBwAG8AcgB0ACAARwBlAG4AZQByAGEAdABvAHIAIABcKAAyADUALgAzAC4A
+    MAAuADAAXCkpCi9BdXRob3IoKQovVGl0bGUoTGlzdCAmIExhYmVsIFJlcG9ydCkK
+    L1N1YmplY3QoKQovS2V5d29yZHMoKQovQ3JlYXRpb25EYXRlKEQ6MjAyMzA4MDQx
+    NDMyMjlaKQovTW9kRGF0ZShEOjIwMjMwODA0MTQzMjI5WikKL1Byb2R1Y2VyKHdQ
+    REY0IGJ5IFdQQ3ViZWQgR21iSCkNCj4+DQplbmRvYmoNCjMgMCBvYmoNCjw8Ci9U
+    eXBlL1hPYmplY3QvU3VidHlwZS9JbWFnZQovTmFtZS93cHQxCi9XaWR0aCA4MTgK
+    L0hlaWdodCAyNTYKL0JpdHNQZXJDb21wb25lbnQgOAovQ29sb3JTcGFjZS9EZXZp
+    Y2VSR0IKL0xlbmd0aCAyMjIxOAovRmlsdGVyIFsvRENURGVjb2RlXSA+Pg0Kc3Ry
+    ZWFtDQr/2P/gABBKRklGAAEBAAABAAEAAP/bAEMACAYGBwYFCAcHBwkJCAoMFA0M
+    CwsMGRITDxQdGh8eHRocHCAkLicgIiwjHBwoNyksMDE0NDQfJzk9ODI8LjM0Mv/b
+    AEMBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+    MjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAQADMgMBIgACEQEDEQH/xAAfAAABBQEB
+    AQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMA
+    BBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1
+    Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOU
+    lZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm
+    5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/
+    xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJ
+    IzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNk
+    ZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4
+    ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhED
+    EQA/APfq8t8a/FO/8L+J59Kg062mjjRGDyMwJ3KD2+tepV84fF3/AJKJe/8AXKL/
+    ANAFdGFhGc7SOXFzlCneL6m7/wAL01X/AKA9n/321H/C9NV/6A9n/wB9tXlNFeh9
+    XpdjzvrVb+Y9W/4Xpqv/AEB7P/vtq9M8C+K/+Ev8Pf2g8SQzpK0UsaEkAjBGM+xH
+    618u16p8ENY+z67faS7YS7iEsYP99Ow+qk/981jXw8FTbitjfDYmbqJSejPdKKKK
+    809QKKKKACuW8eeLv+EO0JL2OFJ7iWYRRxuSAeCSePQD9RXU14H8atZ+2+KLfS0b
+    MdhDlh/00fBP/joX9a2w9Pnmk9jDE1PZ021uWv8Ahemq/wDQHs/++2o/4Xpqv/QH
+    s/8Avtq8por0vq9LseX9arfzHq3/AAvTVf8AoD2f/fbV0vgb4nX3izxGNMuNPt4I
+    zE8m+NmJyMev1rwSvQPg3/yPqf8AXrJ/Ss6tCnGDaRpRxFWVRJs+iKKKK8s9cKKK
+    8w8ffFWPRJJdK0MpPqC/LLOfmSE+gH8TfoPfpVwpym7RIqVI01zSPQdT1nTdFt/t
+    GpXsFrH2MrgFvoOpP0rgdU+NegWjMmn2t1fMOjYESH8Tz/47Xhuoaje6rdvd391L
+    czv1eVsn6ew9qq13wwcV8Wp5tTHTfwKx6rdfHPVnJ+yaRZRDt5rvJ/IrWe3xp8Us
+    ciPTl9hA39Wrzqitlh6S6GDxNV/aPSIvjZ4nQ/Pb6bIP9qFx/J617L463AIF/ocT
+    ju0E5XH4EH+deQUUPD0n0GsTVX2j6Q0b4seFtWZY5Lp7CVuNt2u0f99DK/mRXbRy
+    JNGskTq6MMqynII9jXxzXQeGvGmteFbgNYXRNvnL20vzRv8Ah2PuMGuepg1vBnTT
+    xz2mj6oormvB/jXTvGFgZbY+TdxgefbOfmT3Hqvv/KulrglFxdmehGSkroKqapdt
+    YaRe3iKGa3geUKehKqTj9Kt1meJP+RX1f/rym/8AQDRHdDlomeQf8L01X/oD2f8A
+    321H/C9NV/6A9n/321eU0V6/1el2PF+tVv5j6D+H/wARr3xjrVzY3Njb26RW5mDR
+    sSSdyjHP1r0WvBvgd/yNt/8A9eLf+jEr3mvOxMFGpaJ6eFnKdO8gooorA6AooooA
+    KKKKAPIvEvxe1HQ/El/pkWmWssdtKY1dnYE/Wsr/AIXpqv8A0B7P/vtq474g/wDI
+    /wCtf9fJ/kK5qvWhh6bim0eNPE1VJpM9j0f4z6nqWt2Fg+lWiJc3McLMrtkBmAyP
+    zr2Wvk7wr/yN+i/9f8H/AKMWvrGuTFU4wa5UduDqSnFuTuFFFcv458Y2/g/RftBC
+    y3s2UtoSfvN3Y/7I7/gO9c0YuTsjqlJRXMzW1nX9K8P2v2jVb6K2jP3Qxyzf7qjk
+    /gK881H446VA5XTtKuboD+OVxED9PvH9BXjOq6vfa3qEl9qNy89xIeWY9B6Adh7C
+    qVehDBwS97U8ypjpt+5oj1uT463xP7vQ7dR/tTsf6Cov+F6ap20ez/7+NXlNFbfV
+    qXYx+tVv5j1b/hemq/8AQHs/++2o/wCF6ar/ANAez/77avKaKPq9LsH1qt/Merf8
+    L01X/oD2f/fbUf8AC9NV/wCgPZ/99tXlNFH1el2D61W/mPVv+F6ar/0B7P8A77aj
+    /hemq/8AQHs/++2rymij6vS7B9arfzH2Hayme0hmIAMkasQO2Rmparad/wAgy0/6
+    4p/6CKs15D3PaWwUUUUhhRRRQAUUUUAFIzKiM7sFVRkknAAqpqeqWmj2El7fTCKC
+    Mck9SewA7mvEPFfji/8AEszQoWttOB+SBT973c9z7dB+tY1a0aa13PSy/LKuNl7u
+    kVu/63Z6Br3xQ0rTWeDTkOoTjjcrbYgf97+L8OPeuA1P4h+JNSLAXv2SM/wWq7Mf
+    8C+9+tcrRXBOvOXU+ywuT4TDrSN33ev/AACe5vbq8kMl1czTuerSyFifzqCiisj0
+    kklZF601rVNP/wCPPUbqAekczKD+Ga6zSvinrlkwW+WK/i77gEfHsyjH5g1wtFVG
+    pKOzOevgsPXVqkE/z+/c+gfD3jbRvEW2K3mMN2f+Xeb5WP8Au9m/Dn2FdHXy4rFW
+    DKSCDkEdq9N8GfEl0ePTtfl3RnCx3jHlT6P6j/a/P1HZSxV9Jny+Y5BKmnUw2q7d
+    fl3/AD9T1aigEEAg5B70V2HzIUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFF
+    FFABRRRQAUUUUAFFFFABRRRQAUUUUAFfOHxd/wCSiXv/AFyi/wDQBX0fXzh8Xf8A
+    kol7/wBcov8A0AV14P8AifI48d/C+Zw1FFS29vJdXCQQrukc4VR3PpXpnkkVa3hn
+    VjoXibTtTBIWCdWfHdDww/75JrJopNXVmCbTuj7HVgyhlIKkZBHelrlPhxrH9teB
+    dOmZt00CfZpfqnAz9V2n8a6uvElHlk0z6CElKKkuoUUUVJRHcTx2ttLcTMFiiQu7
+    HsAMk18k6zqUmsa1e6lLnfczNJg9gTwPwGB+FfQPxZ1n+yfA1xCjYmvmFsv+6eW/
+    8dBH4184V6OChZOR5mPneSgFFFS3NvLaXU1tMu2WF2jdfRgcEV2nARV6B8G/+R9T
+    /r1k/pXn9egfBv8A5H1P+vWT+lZV/wCHI1ofxY+p9EUUUE4GT0rxj3Tz/wCKfjN/
+    DejrYWMm3Ur1SFYHmKPoW+p6D8T2r53JJOScmt/xnrzeI/Fd9qG4mEyGOAeka8L+
+    fX6k1gV7FCl7OFup4mIqupO/QKKK94+GHw8t9OsYNd1WASX8wEkEcgyIFPQ4/vHr
+    7fXNVVqqnG7Jo0ZVZWR51ofwu8T65GswtFs4G5El2xTI9lwW/Surh+BFyyjz9fiR
+    vRLYsPzLCvaqK8+WLqPbQ9KOCpJa6niF38CtRRCbPWrWZuwliaMfmC1cL4g8F694
+    Z+bUrFlgzgXEZ3xn8R0+hxX1TTJoYriF4Z40kicFXR1yGB7EHrThjJp+9qKeCpte
+    7ofHVFd78TfA6+FdTS8sFP8AZd2x2L18l+pTPp3H4+lcFXowmpx5keXODhJxkaGh
+    61eeH9Xg1Kxk2TQtnHZx3U+oNfU+g61beIdEtdUtD+6nTdtJ5RuhU+4ORXyRXr/w
+    Q15kub7QZX+R1+0wA9mGAw/EbT+BrmxdLmjzLdHVgqrjPkezPaazPEn/ACK+r/8A
+    XlN/6Aa06zPEn/Ir6v8A9eU3/oBrzY7o9SXws+SqKKK90+ePT/gd/wAjbf8A/Xi3
+    /oxK95rwb4Hf8jbf/wDXi3/oxK95rysX/FPYwX8IKKKK5jrCiiigAooooA+XPiD/
+    AMj/AK1/18n+Qrmq6X4g/wDI/wCtf9fJ/kK5qvbp/AjwKnxv1Nfwr/yN+i/9f8H/
+    AKMWvrGvk7wr/wAjfov/AF/wf+jFr6xrhxvxI9DAfCwr5f8AiB4ifxJ4uu7kOWtY
+    WMFsM8bFOM/icn8a+jPEt42n+F9VvEOHhtJXQ/7QU4/XFfJdPBQ1chY+bsohRRV/
+    RNNbWNcsNNViv2qdIiw/hBIBP4CvQbsrnmpXdkTaP4b1nX2YaXps9yFOGdFwoPoW
+    PA/OugT4TeM3GTpaJ/vXMX9Gr6K0/T7XSrCGxsoVht4VCoijoP6n3qzXnSxsr+6j
+    044CFveZ84f8Kj8Y/wDPhD/4Ep/jR/wqPxj/AM+EP/gSn+NfR9FT9cqeRf1Gn5nz
+    h/wqPxj/AM+EP/gSn+NH/Co/GP8Az4Q/+BKf419H0UfXKnkH1Gn5nzh/wqPxj/z4
+    Q/8AgSn+NH/Co/GP/PhD/wCBKf419H0UfXKnkH1Gn5kFnG0NjbxOMOkaqw9wKnoo
+    rkOwKKKKACiiigApk00dvBJPM6pFGpd3Y4CgDJJp9ea/FbxCYLWHQ7d8POBLcEf3
+    AflX8SM/gPWoqTUIuTOrBYWWKrxpR6/l1OJ8ZeK5vE+qFlLJYwki3iPp/ePuf06f
+    Xm6KK8mUnJ3Z+kUaMKNNU6askFFFFSahRRRQAUUUUAFFFFAHqPw08YsXTQNQlyCM
+    WkjHp/0zJ/l+XoK9Tr5djkeKVJI3ZHQhlZTggjoRX0P4S10eIvDtvfEjzwPLnA7S
+    Dr+fB/GvQwtXmXIz4zP8vVKaxFNaS39f+D+fqbdFFFdZ82FFFFABRRRQAUUUUAFF
+    FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFfOHxd/wCSiXv/AFyi
+    /wDQBX0fXzh8Xf8Akol7/wBcov8A0AV14P8AifI48d/C+Zw1bvgr/keND/6/ov8A
+    0IVhVu+Cv+R40P8A6/ov/QhXoz+Fnl0/jQnjHR/7B8W6lpwXbHHMWiH+w3zL+hFY
+    deu/HHRvLvNN1qNeJVNtKR6j5l/MFv8AvmvIqmjPngmXXhyVHE9e+BusbLvUtGdu
+    JFFzEPcfK36Ffyr2qvlbwTrH9heMdMvmbbEswSU9tjfK35A5/CvqmvPxcLVL9z0c
+    FPmp27BRRUdxPHa20txMwWKJC7sewAyTXKdh4P8AGrWftvie30uNsx2MOXH/AE0f
+    BP8A46F/M15nV7WdSk1nWr3Upc77mZpMHsCeB+AwPwqjXt0ockFE8CrPnm5HT/D7
+    Rf7d8badbMu6GN/Pm9Nqc4P1OB+NZ3ij/kbda/6/5/8A0Y1erfA7RfKsNQ1uRfmm
+    YW8RP91eW/Akj/vmvKfFH/I261/1/wA //oxqzjPmqtdjWcOWjF92ZNegfBv/AJH1
+    P+vWT+lef16B8G/+R9T/AK9ZP6VVf+HIih/Fj6n0RXP+ONSOk+CdXu1ba4tyiH0Z
+    /kB/NhXQV558Z7kweBPLB/193HGfwDN/7LXlUo800j2a0uWm35Hz1RRRXtHgG/4J
+    0ddd8ZaZYSLuiebfKD0KKNzD8QMfjX1T0rwD4J2wm8Z3E7DiCycj2JZR/Imvf68z
+    GSvO3Y9bAxtTv3CiiiuQ7QooooA5zx5oy674L1K027pViM0PqHT5hj64x+NfLVfY
+    5AYEEZB4INfIWp2v2LVby0/54TvH/wB8sR/SvQwUtHE83Hx1UirXQ+BdSOleN9Iu
+    t2F+0LG5/wBl/kP6NXPU6N2ikWRDhlIYH0Irtkrpo4IvlaZ9jVmeJP8AkV9X/wCv
+    Kb/0A1etphc2sM6/dkRXH4jNUfEn/Ir6v/15Tf8AoBrxI/Ej35fCz5Kooor3D549
+    P+B3/I23/wD14t/6MSvea8G+B3/I23 //AF4t/wCjEr3mvKxf8U9jBfwgooormOsK
+    KKKACiiigD5c+IP/ACP+tf8AXyf5CuarpfiD/wAj/rX/AF8n+Qrmq9un8CPAqfG/
+    U1/Cv/I36L/1/wAH/oxa+sa+TvCv/I36L/1/wf8Aoxa+sa4cb8SPQwHwswfG0TTe
+    B9bRev2KU/kpP9K+Va+xJ4I7m3lglG6OVCjD1BGDXyRrGmTaNrF5ptwMS20rRk+u
+    DwfoRg/jV4KWjiRj46qRSrX8K6hFpXivSr6cgQw3SNIT2XPJ/AZrIortaurHnp2d
+    z7HBDKGUgg8gjvS187+FPixq3h20jsbuBdRs4xtjDvtkjHoGwcj2I/Gu0i+OejlR
+    5uk3yn0Vkb+orypYWonornsQxdKS1dj1SivL/wDheOg/9A3Uv++Y/wD4qj/heOg/
+    9A3Uv++Y/wD4qp+r1exf1ml/MeoUV5ivxx8Pk/Np2pgeyRn/ANnq7bfGXwnOQJGv
+    bf3lgzj/AL5JpOhUXQaxFJ/aPQaKx9J8V6DrpC6bqttPIekYba //AHycH9K2Kzaa
+    0ZqmmroKKKKQwooooAKKKKACvnDxJqh1rxFfX+4lJZT5ef7g4X9AK988RXJs/DWp
+    3CttaO1kKn0bacfrivm6uLGS2ifV8M0V+8qvyX6v9AorsfCXgNvFWmTXg1EW3lzG
+    LYYd+cAHOdw9a3z8HXAz/bi/+Av/ANnXPGhUkrpHt1c2wdGbpznZryf+R5fRWnoe
+    g3/iHUFs7GPc3V3bhY19Sa9Q0/4S6RDEDfXVzcy99hEaflyf1pU6M56oeMzPDYR8
+    tR69lueOUV7Vc/CnQJoyIJLuB+xEgYfiCK888U+CNQ8METOwubJjhbhBjB9GHY/p
+    TnQnBXZGFzfC4mXJB2fZ6HMUVLbW095cx29tE0s0jbURBkk16bovwkDQrLrV46uR
+    kwW2Pl+rHP6D8amFOU/hR0YvHUMIr1ZWv06nltFe3n4WeGym0Ldg/wB4Tc/yxXLe
+    IfhXcWUD3OjTvdooyYJAPMx7EcN9MD8a0lhqkVc4qOe4OrLlu16nnNei/CTVTBq9
+    3pbt8lxH5iAn+New+oJ/75rzsggkEEEdQa3fBd01n4y0qVerXCxfg/yH/wBCrOlL
+    lmmdeY0VWwlSHl+K1R9DUUUV65+ahRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRR
+    QAUUUUAFFFFABRRRQAUUUUAFFFFABXzh8Xf+SiXv/XKL/wBAFfR9fOHxd/5KJe/9
+    cov/AEAV14P+J8jjx38L5nDVu+Cv+R40P/r+i/8AQhWFW74K/wCR40P/AK/ov/Qh
+    Xoz+Fnl0/jR9A/EXRv7b8D6jAq7poU+0Reu5OePcjI/GvmGvscgMCCAQeCDXyh4r
+    0c6D4p1HTcEJDMfLz/cPK/8AjpFceCno4ndj4aqZj19UeCNY/t3wbpl8zbpTCI5T
+    33r8rfmRn8a+V69p+Busb7bU9GduUYXMQ9j8rfqF/OtMXC9O/YywU+Wpbuev1w3x
+    Z1n+yfA1xCjYmvmFsv8Aunlv/HQR+NdzXgnxq1n7Z4nt9LRsx2MOXH/TR8E/+Ohf
+    zNcWHhzVEd+KnyUmeZUqqzsFUEsTgAdSaSuv+Gei/wBt+ObFHXdBan7VL9E6f+PF
+    RXqykoxcmeNCLlJRXU+gfC2jroHhjT9MAAaCEeZju55Y/wDfRNfMvij/AJG3Wv8A
+    r/n/APRjV9ZV8m+KP+Rt1r/r/n/9GNXDg23KTZ6OOSUIpGTXoHwb/wCR9T/r1k/p
+    Xn9egfBv/kfU/wCvWT+lddf+HI4qH8WPqfRFeXfHJiPC+nJ2N7n8kb/GvUa8w+OM
+    ZPhOwk7LfBfzR/8ACvMw/wDFR62J/hSPBqKKK9g8M9X+Bag63qzdxboP/Hv/AK1e
+    414X8DJQPEWpxd2tA35OB/WvdK8rF/xWezg/4SCiiiuY6gooooAK+UfF6hPGmuKO
+    n9oT/wDow19XV8neKpBN4v1qQdGv5yPp5jV24L4mcGP+FGRRRRXonln1r4ccyeF9
+    Jc9WsoT/AOOCjxJ/yK+r/wDXlN/6AaPDiGLwxpMZ6rZQqfwQUeI/+RX1f/rym/8A
+    QDXifb+Z9B9j5HyVRRRXtnz56f8AA7/kbb //AK8W/wDRiV7zXgvwOI/4S6+Hc2DH
+    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 //AFxXTUyS
+    MOByQw5DDqKakp3eXKNr9j2b6f4f/rqYxUVZGtarKvN1Jbvc+bdY/wCQ3f8A/XzJ
+    /wChGqVXdY/5Dd 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 //AKFXuFYeu+D9B8Sz
+    xTavY/aZIVKofOdMAnP8LCooVFTnzM0r03Ug4o+U6K+lv+FVeCv+gL/5NTf/ABdH
+    /CqvBX/QF/8AJqb/AOLru+u0+zPP+oVO6/r5HzTRX0t/wqrwV/0Bf/Jqb/4uj/hV
+    Xgr/AKAv/k1N/wDF0fXafZh9Qqd1/XyPmmivpb/hVXgr/oC/+TU3/wAXR/wqrwV/
+    0Bf/ACam/wDi6PrtPsw+oVO6/r5HzTRX0wvwt8FqeNFX8biU/wDs1XLf4f8AhO2I
+    KaDZnH/PRN //AKFml9dh2Y1gKnVo+Y7Oxu9RuVtrK2luJm6RxIWY/gK9q+HvwrOl
+    Txaxr6o12mGgtQdwiP8AeY9C3oBwPr09OtLG0sI/Ls7WC3j/ALsMYQfkKsVhVxcp
+    q0dDpo4OMHzSd2FFFFch2BRRRQAUUUUAFFFFABSMiuu1lDD0IpaKAPOvEXwst7+e
+    W70m6+zzyMWaKclkJPXDdR39fwrz3UvBniDSmP2jTJ2Qc+ZCPMXHrlc4/HFfQ9Fc
+    88NCWq0PbwufYqglGXvLz3+ //O58/wDgMFfHOmAggiRuD/uNX0BUUttBOQZoY5Nv
+    TeoOPzpn2G0/59YP+/YqqVL2atuc+ZY+OOqKo48tlbv/AJHmvxat57q/0eG3hkml
+    KS4SNSxPK9hXNaT8OPEOplWkthZQn+O5O0/98/e/MCvdURY1CooVR0AGBTqmWHjK
+    blJnRQzyth8PGhSitOr9b7f8Ocj4d+HmkaCyXEgN7eLyJZl+VT6qvQfU5PvXXUUV
+    tGMYq0UeVXxFWvPnqyuwoooqjEKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+    iiigAooooAKKKyr2z1ea6Z7XU1ghONsZhVscc8mgDVorD/s/X/8AoNJ/4Dr/AIUf
+    2fr/AP0Gk/8AAdf8KANyisP+z9f/AOg0n/gOv+FH9n6 //wBBpP8AwHX/AAoA3KKw
+    /wCz9f8A+g0n/gOv+FH9n6 //ANBpP/Adf8KANyisP+z9f/6DSf8AgOv+FH9n6/8A
+    9BpP/Adf8KANyisP+z9f/wCg0n/gOv8AhR/Z+v8A/QaT/wAB1/woA3KKw/7P1/8A
+    6DSf+A6/4Uf2fr //AEGk/wDAdf8ACgDcorD/ALP1/wD6DSf+A6/4Uf2fr/8A0Gk/
+    8B1/woA3KKw/7P1 //oNJ/wCA6/4Uf2fr/wD0Gk/8B1/woA3KKw/7P1//AKDSf+A6
+    /wCFH9n6/wD9BpP/AAHX/CgDcorD/s/X/wDoNJ/4Dr/hR/Z+v/8AQaT/AMB1/wAK
+    ANyisP8As/X/APoNJ/4Dr/hR/Z+v/wDQaT/wHX/CgDcorD/s/X/+g0n/AIDr/hR/
+    Z+v/APQaT/wHX/CgDcorD/s/X/8AoNJ/4Dr/AIUf2fr/AP0Gk/8AAdf8KANyisP+
+    z9f/AOg0n/gOv+FH9n6 //wBBpP8AwHX/AAoA3KKw/wCz9f8A+g0n/gOv+FH9n6//
+    ANBpP/Adf8KANyisP+z9f/6DSf8AgOv+FH9n6/8A9BpP/Adf8KANyisP+z9f/wCg
+    0n/gOv8AhR/Z+v8A/QaT/wAB1/woA3KKw/7P1/8A6DSf+A6/4Uf2fr //AEGk/wDA
+    df8ACgDcorD/ALP1/wD6DSf+A6/4Uf2fr/8A0Gk/8B1/woA3KKw/7P1 //oNJ/wCA
+    6/4Uf2fr/wD0Gk/8B1/woA3KKw/7P1 //AKDSf+A6/wCFH9n6/wD9BpP/AAHX/CgD
+    corD/s/X/wDoNJ/4Dr/hR/Z+v/8AQaT/AMB1/wAKANyisP8As/X/APoNJ/4Dr/hR
+    /Z+v/wDQaT/wHX/CgDcorD/s/X/+g0n/AIDr/hR/Z+v/APQaT/wHX/CgDcorD/s/
+    X/8AoNJ/4Dr/AIUf2fr/AP0Gk/8AAdf8KANyisP+z9f/AOg0n/gOv+FH9n6 //wBB
+    pP8AwHX/AAoA3KKw/wCz9f8A+g0n/gOv+FH9n6 //ANBpP/Adf8KANyisP+z9f/6D
+    Sf8AgOv+FH9n6/8A9BpP/Adf8KANyisP+z9f/wCg0n/gOv8AhR/Z+v8A/QaT/wAB
+    1/woA3KKw/7P1/8A6DSf+A6/4Uf2fr //AEGk/wDAdf8ACgDcorD/ALP1/wD6DSf+
+    A6/4Uf2fr/8A0Gk/8B1/woA3KKw/7P1 //oNJ/wCA6/4Uf2fr/wD0Gk/8B1/woA3K
+    Kw/7P1 //AKDSf+A6/wCFH9n6/wD9BpP/AAHX/CgDcorD/s/X/wDoNJ/4Dr/hR/Z+
+    v/8AQaT/AMB1/wAKANyisP8As/X/APoNJ/4Dr/hR/Z+v/wDQaT/wHX/CgDcorD/s
+    /X/+g0n/AIDr/hR/Z+v/APQaT/wHX/CgDcorD/s/X/8AoNJ/4Dr/AIUf2fr/AP0G
+    k/8AAdf8KANyisP+z9f/AOg0n/gOv+FH9n6 //wBBpP8AwHX/AAoA3KKw/wCz9f8A
+    +g0n/gOv+FH9n6 //ANBpP/Adf8KANyisP+z9f/6DSf8AgOv+FH9n6/8A9BpP/Adf
+    8KANyisP+z9f/wCg0n/gOv8AhR/Z+v8A/QaT/wAB1/woA3KKw/7P1/8A6DSf+A6/
+    4Uf2fr //AEGk/wDAdf8ACgDcorD/ALP1/wD6DSf+A6/4Uf2fr/8A0Gk/8B1/woA3
+    KKw/7P1 //oNJ/wCA6/4Uf2fr/wD0Gk/8B1/woA3KKw/7P1//AKDSf+A6/wCFH9n6
+    /wD9BpP/AAHX/CgDcorD/s/X/wDoNJ/4Dr/hR/Z+v/8AQaT/AMB1/wAKANyisP8A
+    s/X/APoNJ/4Dr/hR/Z+v/wDQaT/wHX/CgDcorD/s/X/+g0n/AIDr/hR/Z+v/APQa
+    T/wHX/CgDcorD/s/X/8AoNJ/4Dr/AIUf2fr/AP0Gk/8AAdf8KANyisP+z9f/AOg0
+    n/gOv+FH9n6 //wBBpP8AwHX/AAoA3KKy1tNWCANqak45PkrzRQBqUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+    RRQAUUUUAFFFFABRRRQAUUUUAFFFFABVYahaNefZBcIbjp5eeemf5VZrjIP+Sht/
+    vN/6LNAHZ0UUUAFFFFABRRRQBl67qzaPZxzrEJS0gTBbHYn+lX7WY3FpDMRgyIr4
+    9MjNc/42/wCQRB/13H/oLVuab/yC7T/rin/oIoAs0UUUAFFFFABRRRQAUUUUAFFF
+    FABRRRQAUUUUAFFZ0etW0urvpipL56ZySBt6Z9a0aACiiigAooooAKKKKACiiigA
+    ooooAKKKKACq0GoWlzcPBDcI8qZ3KDyMHBqzXGeGP+Rp1D/dk/8AQxQB2dFFFABR
+    RRQAVl61rcOjwqWQyTSfcjBx+J9q1K4/VALjxzZxvyqhMA+2TQBas9Y164u4BJpi
+    x28jgMxjYFV9ev8ASumoooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+    gAoqrqF9Fptm91MrtGhAIQAnk4706yvI7+zjuogwSQZAYYPXFAFimJLHJu8t1bac
+    Hac4NE0ZlgkjDFS6ldw6jI61heHvD9xpFxPLNOjh12qqZweepz3/AMaAOgooooAK
+    KKKACiiigAooooAKKKKACkJCgkkADkk0tcf4qvri61CHR7Y4DFd4BxuY9AfboaAN
+    m48T6TbuUNz5jD/nmpYfn0pbXxJpV04RLoI56CQFf1PFQ2XhXTbaJRNF9olx8zuT
+    jPsKh1PwlZXEDNZp5E4Hy4J2t7EUAdFRVDR7GbTtOjt57gzOvc9F9h7VfoAKKKKA
+    CiiigAooooAKKztV1q20gwi4SVvNzt8sA9MdcketaNABRRRQAUUUUAFFFFABRRRQ
+    AUUUUAFFFFABXGQf8lDb/eb/ANFmuzrjIP8Akobf7zf+izQB2dFFFADZJEijaSRg
+    iKMlmOABXPXXjOwhcpBHLPj+IDap/Pn9K3rm3iu7aS3mUNG4wwqCw0uz02IJbQqp
+    xy5GWb6mgDEg8a2jyBbi2lhB/iB3Y+tdJFLHPEssTh42GVYHgiqWr2Vtf2EsUwTe
+    FJRj1U9sVkeCp3k06eFiSsUmV9gR0/T9aAHeNv8AkEQf9dx/6C1WzrdlpWlWYuJC
+    ZDAhEaDLH5R+VVPG3/IIg/67j/0Fqj8N6FG9smo3y+dNIAY1fkKvQHH+e1ACf8Jv
+    Bu/48ZdnrvGa2dN1uy1UEW8hEgGTG4ww/wAfwq+UVk2FQVxjBHFcf4k0ldLki1XT
+    x5JVwGVOAp7ED07YoA7KoLu8t7GAzXMqxxjue/sB3pmm3g1DToLoDHmLkgdj0P65
+    rkSr+KPErxu7CzgzgD+6Djj3J/zxQBoS+NrUORBaTSD1JC/41ZsfF2n3cgjl327n
+    gGT7v5/41tW9rBaRCK3iSNB2UYrO1nQrbVLdyI1S5AykgGCT6H1FAGsDkZHSqGq6
+    tBpECTTpIyu20eWATnGe5HpWP4Q1GSWGXT5yS8HKZ67ehH4H+dO8bD/iTwn/AKeB
+    /wCgtQBc1DxLZafGm7fJK6hxEvUAjIz6U7RNdXWTNtt2iEWMktnOc/4VT8OaNELR
+    NQu0E1zMN4LjOxe2PwroVRVztUDPoKAMjUfE2n6fIYizTSjgrEM4+p6VmjxvBuG6
+    xlCeocE1tQaFp1vdyXKW6mR23fMMhfoO1XZUikjKTKjIRgq4GDQBBp2p2uqW/nWz
+    5A4ZSMMp9xVfVtcttHaIXEcrGUEjywD0x6ketc/paDTfGstnA37iQEYzkY27h+XS
+    uwkhilx5kSPjpuUHFAHAwa5bReJ5dTaOUwuDhQBu6AeuP1rqNN8S2eqXgtoYp1cg
+    nLqAOPoaxrSGI+OriMxoUAb5dox90dq65LeCNtyQxq3qqgGgB0kiRRtJIwRFGSzH
+    AArnbrxnYxSFLeKWfH8Q+UH6Z5/SqfiW5m1HV4NGt2wuRv8Adjzz7Ac10en6XaaZ
+    AsdvEoYD5pCPmb6mgDGt/GllI4W4glhz/F94D6966OGaO4iWWF1eNhkMpyDUF9p1
+    rqMJiuYlbI4bHzL9DXLaFNNo3iCXSJnLQu2Fz64yD+IoA6y8uksbOW5kDFIxkhet
+    Z58SWC6Yl85kRJCQkZA3sR14BqfXRnQr3/rka5nwrpEd+pu7weZFCfLijbpnqSfz
+    oA07LxbHfXRhjspcBWbIYEkAE9Pw9a0NJ1211hpVgWRGjAJEgAyD6YJrQWKNMbI1
+    XHTAxiuJjH9geMtv3beZsD02N0/I/wAqAO5rO1XWrbR1iNwsjGQnasYBPHfkitGu
+    Jvx/bnjBLUfNBCdjfReW/XigDsreYXFvHMEZBIoYK3UZ9akoooAK4zwx/wAjTqH+
+    7J/6GK7OuM8Mf8jTqH+7J/6GKAOturhbS1luHDFI1LEL1wKz4vEdhJppvmZ4og5Q
+    K4G5iBngAn1q1q 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 //oRrG1vV
+    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
+    0ucMvYAXoyl8rlZJ7NuKeV3CWh1UuU3Wk //M16RG2QokOtIiIQWfjC6dr6+TWSp+
+    zgaCVnmeGFxgQKp2lBBEfpX+c7FYrtNRsn6enQMTXca7qDcDgC7+PQBu/bdkmc5h
+    8TzK0RUeiyAw6s8UImO4Ina/3EdEw02OEit6/emm //EzDHqfBzQbR5L+bZPcP6dw
+    u/z3Ci4fk9n3FXr6hefEtskUHdeL9/eXH26ugzRl873gZnlxOoJbSfQ38/WPZD5e
+    rc8zR9txsieQPlDHtEXSL6UPPAC/w/xk347J+15yViLsmORdFnfRUgv0JH4uTSbB
+    aY5e4RXBIeI4sP+0mK/W6fI8t4JyisgtnS+N8QVJHhbTaTqajHcM1YkxCncyGrQO
+    MNVlNpdUnUtReJnNvIwrYQ05kLa4Vu8fYaIWVmQCo/OSPTCRScBMgbRf3jFkd0VR
+    min35aeqvSMP7uiwb7fJeDJPkE0XePXOnXoU7dZRtPlRfMqn6TXl8iKRU1DcxWIo
+    /cmk4nTSIACnuO59XBb0zZwCd915p0jQJSZJMj0vnG0PVuoClhtzEm6Fy3fkxuNz
+    dA7/govf8KTf/AqXN/1+73LQE/2fgd5f9u57F/c3n28/Xr9/34eHm8sPgzDT/9j5
+    0Lt9f //xugcqcvCpXy97ZjKDwYC7fENLJRjFQ7n1uRzXL6Icd3L6CkwoIaCmcFRE
+    iwlVB4/GlH1sV7Ws2lVHGRPRrpNkVg9odAEoeFvA4Ag54H26ep6uk2Rdj2pNgapE
+    W1Qbl1EfFsvJGHkcxebCblRmrW0sXBm9l84f08noAKraoKr2O6vctqW/pphcMU2/
+    JMlylM5L+Ao7ASm48/z8QCI0uUZkqHZ0xvLI8AMpxMrduqJD9cLo3d8QBjsU8CXD
+    lAa+0MXBpDwgaUDzipkVDXwTgINhefBYXpOWZ6DMYPiYziZpA22xPbAmcvaAuqTb
+    jrrG58qLyWIPb2d3/YZyFmPBEWKx4cdi4ibf5e5sNfLAwOpt/Ecj5WLDI84P1L17
+    yuVV1HCj59X0ebhYHbeq0c5FGjuUNsB8CzLWx9UU1tnIV9Jt1NRbeLNxd9Q/Dkmn
+    LPL9xushYwZFAc19n4kvO+FdIM09HPezJFqtcDF6WMR3hNuuZ6rKGU0oSGioj5v6
+    746lzoRmwhM8kvQGZYx8z+afkSdluibC7J+PSrZBJC48uk+o9Rl1z41I6GBgKJrA
+    Yl2EYd3/HHCSZbxFkNCyYBnLcssUNiLL5N3i13INXkaqUDtfEzBaqkpS1Kp6qpJe
+    OSxkTVCSvjMlC3UPbf8O3qk77FEzgKZqW7alNtFw34D4Ge4bg6hJlOSSu8i1yni/
+    LSfzRumGO4ExkrdKNz4FqnLazPLhYj9tilLazGfS8szM5+q4gtsWGZRnnne0rUx2
+    QqJ6Idlp0TLZCaNN42QnJKYf1SwkC12V6c6zKFykQulhkWCEs8sTyqlSKmwj1n4O
+    1tFWEjiaEtugbtti3D3UMTm52ezQm5yy2yreb/eGG2ZG6NDV89DKH3Qzy+Rr3Uxy
+    Zpu7mdUiwqc/vaZqA7zj3yhJs8rqDTDHXaEem5RWLTBzrL/sHlyT1VXo3OwEbyaf
+    eitvliyOT/ZmKbR+bYcgtWGNvVlKpiOp/nxvbg683SEo2cSP26j5yg7h9ZCqvkPg
+    5f4gbtgelCRr0B5kRfCmPnyb9qAkTKP2QP3fu4NQOPNYBsPgd94dsDfrDvyjbNcd
+    sDfoDrxyld1Boe7/oDvwqDZupTbJVd0d0Mx+d1CTCnxAzlLBCRH5SCrQwlWmAvID
+    +l3HM6SBjR04jJH4h0ESA31oS7J7xfAzM29xlaQiLjj2DuHWK7tKekiX80m6nozX
+    kM7hR7qkO601PKZrWCbfvy+Wa6B7nJ0bJyWqbpy88IWsHV8WZuKycPV7QNy9hCYi
+    7WKbXyoaZsKl4o9kOhml6XIEo8ViCQDeoNDvPfT6su4ezMtj0CUyeWIpjonDd8Sh
+    /eAmF8eGNPvl3R+ITQaEcZoMh8t0NFl74QpJ9g/A4UslYVHGza1SGNK10h38F7MF
+    WjoNCmVuZHN0cmVhbQ0KZW5kb2JqDQo2IDAgb2JqDQo8PA0KL1R5cGUvQW5ub3Qv
+    U3VidHlwZS9MaW5rCi9GIDQvUmVjdCBbNTA3IDc4NyA1NzggNzk3XQovQm9yZGVy
+    IFswIDAgMF0KL0EgPDwgL1R5cGUvQWN0aW9uL1MvVVJJL1VSSSAoaHR0cDovL3d3
+    dy5jZ20uY29tKSA+Pg0KPj4NCmVuZG9iag0KNSAwIG9iag0KPDwNCi9UeXBlL0Vu
+    Y29kaW5nL0RpZmZlcmVuY2VzClsxMjggL0V1cm9dL0Jhc2VFbmNvZGluZy9XaW5B
+    bnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCjggMCBvYmoNClsgNzUwIDc1MCAyNzgg
+    Mjc4IDM1NSA1NTYgNTU2IDg4OSA2NjcgMTkxIDMzMyAzMzMgMzg5IDU4NCAyNzgg
+    MzMzIDI3OCAyNzggNTU2CjU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYg
+    NTU2IDI3OCAyNzggNTg0IDU4NCA1ODQgNTU2IDEwMTUgNjY3IDY2NyA3MjIKNzIy
+    IDY2NyA2MTEgNzc4IDcyMiAyNzggNTAwIDY2NyA1NTYgODMzIDcyMiA3NzggNjY3
+    IDc3OCA3MjIgNjY3IDYxMSA3MjIgNjY3Cjk0NCA2NjcgNjY3IDYxMSAyNzggMjc4
+    IDI3OCA0NjkgNTU2IDMzMyA1NTYgNTU2IDUwMCA1NTYgNTU2IDI3OCA1NTYgNTU2
+    IDIyMgoyMjIgNTAwIDIyMiA4MzMgNTU2IDU1NiA1NTYgNTU2IDMzMyA1MDAgMjc4
+    IDU1NiA1MDAgNzIyIDUwMCA1MDAgNTAwIDMzNCAyNjAKMzM0IDU4NCA3NTAgNTU2
+    IDc1MCAyMjIgNTU2IDMzMyAxMDAwIDU1NiA1NTYgMzMzIDEwMDAgNjY3IDMzMyAx
+    MDAwIDc1MCA2MTEgNzUwCjc1MCAyMjIgMjIyIDMzMyAzMzMgMzUwIDU1NiAxMDAw
+    IDMzMyAxMDAwIDUwMCAzMzMgOTQ0IDc1MCA1MDAgNjY3IDI3OCAzMzMgNTU2CjU1
+    NiA1NTYgNTU2IDI2MCA1NTYgMzMzIDczNyAzNzAgNTU2IDU4NCAzMzMgNzM3IDU1
+    MiA0MDAgNTQ5IDMzMyAzMzMgMzMzIDU3Ngo1MzcgMzMzIDMzMyAzMzMgMzY1IDU1
+    NiA4MzQgODM0IDgzNCA2MTEgNjY3IDY2NyA2NjcgNjY3IDY2NyA2NjcgMTAwMCA3
+    MjIgNjY3CjY2NyA2NjcgNjY3IDI3OCAyNzggMjc4IDI3OCA3MjIgNzIyIDc3OCA3
+    NzggNzc4IDc3OCA3NzggNTg0IDc3OCA3MjIgNzIyIDcyMgo3MjIgNjY3IDY2NyA2
+    MTEgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgODg5IDUwMCA1NTYgNTU2IDU1NiA1
+    NTYgMjc4IDI3OCAyNzgKMjc4IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1
+    NDkgNjExIDU1NiA1NTYgNTU2IDU1NiA1MDAgNTU2IDUwMCBdDQplbmRvYmoNCjkg
+    MCBvYmoNCjw8DQovVHlwZS9Gb250RGVzY3JpcHRvcgovRm9udE5hbWUvQXJpYWwK
+    L0FzY2VudCA3MjgKL0NhcEhlaWdodCA1MDAKL0Rlc2NlbnQgLTIxMAovRmxhZ3Mg
+    MzIKL0ZvbnRNYXRyaXggWzAuMDAxIDAgMCAwLjAwMSAwIDBdCi9Gb250QkJveCBb
+    LTY2NSAtMzI1IDIwMDAgMTA0MF0KL0l0YWxpY0FuZ2xlIDAKL1N0ZW1WIDAKL0F2
+    Z1dpZHRoIDQ0MQovTGVhZGluZyAxNTAKL01heFdpZHRoIDAKL1hIZWlnaHQgMjUw
+    DQo+Pg0KZW5kb2JqDQoxMCAwIG9iag0KPDwNCi9UeXBlL0ZvbnQKL1N1YnR5cGUv
+    VHJ1ZVR5cGUKL0Jhc2VGb250L0FyaWFsCi9FbmNvZGluZyA1IDAgUgovRmlyc3RD
+    aGFyIDMwDQovTGFzdENoYXIgMjU1DQovV2lkdGhzIDggMCBSDQovRm9udERlc2Ny
+    aXB0b3IgOSAwIFINCj4+DQplbmRvYmoNCjExIDAgb2JqDQpbIDc1MCA3NTAgMjc4
+    IDMzMyA0NzQgNTU2IDU1NiA4ODkgNzIyIDIzOCAzMzMgMzMzIDM4OSA1ODQgMjc4
+    IDMzMyAyNzggMjc4IDU1Ngo1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2
+    IDU1NiAzMzMgMzMzIDU4NCA1ODQgNTg0IDYxMSA5NzUgNzIyIDcyMiA3MjIKNzIy
+    IDY2NyA2MTEgNzc4IDcyMiAyNzggNTU2IDcyMiA2MTEgODMzIDcyMiA3NzggNjY3
+    IDc3OCA3MjIgNjY3IDYxMSA3MjIgNjY3Cjk0NCA2NjcgNjY3IDYxMSAzMzMgMjc4
+    IDMzMyA1ODQgNTU2IDMzMyA1NTYgNjExIDU1NiA2MTEgNTU2IDMzMyA2MTEgNjEx
+    IDI3OAoyNzggNTU2IDI3OCA4ODkgNjExIDYxMSA2MTEgNjExIDM4OSA1NTYgMzMz
+    IDYxMSA1NTYgNzc4IDU1NiA1NTYgNTAwIDM4OSAyODAKMzg5IDU4NCA3NTAgNTU2
+    IDc1MCAyNzggNTU2IDUwMCAxMDAwIDU1NiA1NTYgMzMzIDEwMDAgNjY3IDMzMyAx
+    MDAwIDc1MCA2MTEgNzUwCjc1MCAyNzggMjc4IDUwMCA1MDAgMzUwIDU1NiAxMDAw
+    IDMzMyAxMDAwIDU1NiAzMzMgOTQ0IDc1MCA1MDAgNjY3IDI3OCAzMzMgNTU2CjU1
+    NiA1NTYgNTU2IDI4MCA1NTYgMzMzIDczNyAzNzAgNTU2IDU4NCAzMzMgNzM3IDU1
+    MiA0MDAgNTQ5IDMzMyAzMzMgMzMzIDU3Ngo1NTYgMzMzIDMzMyAzMzMgMzY1IDU1
+    NiA4MzQgODM0IDgzNCA2MTEgNzIyIDcyMiA3MjIgNzIyIDcyMiA3MjIgMTAwMCA3
+    MjIgNjY3CjY2NyA2NjcgNjY3IDI3OCAyNzggMjc4IDI3OCA3MjIgNzIyIDc3OCA3
+    NzggNzc4IDc3OCA3NzggNTg0IDc3OCA3MjIgNzIyIDcyMgo3MjIgNjY3IDY2NyA2
+    MTEgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgODg5IDU1NiA1NTYgNTU2IDU1NiA1
+    NTYgMjc4IDI3OCAyNzgKMjc4IDYxMSA2MTEgNjExIDYxMSA2MTEgNjExIDYxMSA1
+    NDkgNjExIDYxMSA2MTEgNjExIDYxMSA1NTYgNjExIDU1NiBdDQplbmRvYmoNCjEy
+    IDAgb2JqDQo8PA0KL1R5cGUvRm9udERlc2NyaXB0b3IKL0ZvbnROYW1lL0FyaWFs
+    LEJvbGQKL0FzY2VudCA3MjgKL0NhcEhlaWdodCA1MDAKL0Rlc2NlbnQgLTIxMAov
+    RmxhZ3MgMzIKL0ZvbnRNYXRyaXggWzAuMDAxIDAgMCAwLjAwMSAwIDBdCi9Gb250
+    QkJveCBbLTYyOCAtMzc2IDIwMDAgMTA1Nl0KL0l0YWxpY0FuZ2xlIDAKL1N0ZW1W
+    IDAKL0F2Z1dpZHRoIDQ3OQovTGVhZGluZyAxNTAKL01heFdpZHRoIDAKL1hIZWln
+    aHQgMjUwDQo+Pg0KZW5kb2JqDQoxMyAwIG9iag0KPDwNCi9UeXBlL0ZvbnQKL1N1
+    YnR5cGUvVHJ1ZVR5cGUKL0Jhc2VGb250L0FyaWFsLEJvbGQKL0VuY29kaW5nIDUg
+    MCBSCi9GaXJzdENoYXIgMzANCi9MYXN0Q2hhciAyNTUNCi9XaWR0aHMgMTEgMCBS
+    DQovRm9udERlc2NyaXB0b3IgMTIgMCBSDQo+Pg0KZW5kb2JqDQo0IDAgb2JqDQo8
+    PA0KL1Byb2NTZXQgWy9QREYvVGV4dC9JbWFnZUNdDQovRm9udCA8PCAvRjEgMTAg
+    MCBSDQovRjIgMTMgMCBSID4+DQovWE9iamVjdCA8PCAvd3B0MSAzIDAgUiA+Pg0K
+    Pj4NCmVuZG9iag0KMTQgMCBvYmoNCjw8DQovVHlwZS9QYWdlcw0KL0NvdW50IDEN
+    Ci9LaWRzIFsgMTUgMCBSIF0NCj4+DQplbmRvYmoNCjE1IDAgb2JqDQo8PA0KL1R5
+    cGUvUGFnZQ0KL1BhcmVudCAxNCAwIFINCi9SZXNvdXJjZXMgNCAwIFINCi9NZWRp
+    YUJveCBbMCAwIDU5NS40NDAgODQxLjkyMF0NCi9Bbm5vdHMgWzYgMCBSIF0KL0Nv
+    bnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoxNiAwIG9iag0KPDwNCi9UaXRsZShc
+    Mzc2XDM3N1wwMDBLXDAwMGxcMDAwaVwwMDBuXDAwMGlcMDAwc1wwMDBjXDAwMGhc
+    MDAwZVwwMDAgXDAwMGNcMDAwaFwwMDBlXDAwMG1cMDAwaVwwMDBlKQ0KL0Rlc3Qg
+    WyAxNSAwIFIgL1hZWiAyOCA1NjkgMF0KL1BhcmVudCAxNyAwIFIgL05leHQgMTgg
+    MCBSDQo+Pg0KZW5kb2JqDQoxOCAwIG9iag0KPDwNCi9UaXRsZShcMzc2XDM3N1ww
+    MDBCXDAwMGlcMDAwb1wwMDBjXDAwMGhcMDAwZVwwMDBtXDAwMGlcMDAwZSkNCi9E
+    ZXN0IFsgMTUgMCBSIC9YWVogMjggNTUyIDBdCi9QYXJlbnQgMTcgMCBSIC9OZXh0
+    IDE5IDAgUiAvUHJldiAxNiAwIFINCj4+DQplbmRvYmoNCjE5IDAgb2JqDQo8PA0K
+    L1RpdGxlKFwzNzZcMzc3XDAwMFVcMDAwclwwMDBpXDAwMG5cMDAwZSkNCi9EZXN0
+    IFsgMTUgMCBSIC9YWVogMjggNTIyIDBdCi9QYXJlbnQgMTcgMCBSIC9OZXh0IDIw
+    IDAgUiAvUHJldiAxOCAwIFINCj4+DQplbmRvYmoNCjIwIDAgb2JqDQo8PA0KL1Rp
+    dGxlKFwzNzZcMzc3XDAwMEJcMDAwaVwwMDBvXDAwMGNcMDAwaFwwMDBlXDAwMG1c
+    MDAwaVwwMDBlXDAwMCBcMDAwdVwwMDByXDAwMGlcMDAwblwwMDBlKQ0KL0Rlc3Qg
+    WyAxNSAwIFIgL1hZWiAyOCA1MDUgMF0KL1BhcmVudCAxNyAwIFIgL1ByZXYgMTkg
+    MCBSDQo+Pg0KZW5kb2JqDQoxNyAwIG9iag0KPDwNCi9Db3VudCA0Ci9GaXJzdCAx
+    NiAwIFIKL0xhc3QgMjAgMCBSDQo+Pg0KZW5kb2JqDQoyMSAwIG9iag0KPDwNCi9U
+    eXBlL0NhdGFsb2cNCi9QYWdlcyAxNCAwIFINCi9PdXRsaW5lcyAxNyAwIFINCi9N
+    ZXRhZGF0YSAyIDAgUg0KL1BhZ2VNb2RlL1VzZU5vbmUNCj4+DQplbmRvYmoNCnhy
+    ZWYNCjAgMjINCjAwMDAwMDAwMDAgNjU1MzUgZg0KMDAwMDAwMTY2MCAwMDAwMCBu
+    DQowMDAwMDAwMDc0IDAwMDAwIG4NCjAwMDAwMDE5NTQgMDAwMDAgbg0KMDAwMDAy
+    OTMxOCAwMDAwMCBuDQowMDAwMDI2NTIzIDAwMDAwIG4NCjAwMDAwMjYzNzUgMDAw
+    MDAgbg0KMDAwMDAyNDM1NiAwMDAwMCBuDQowMDAwMDI2NjE3IDAwMDAwIG4NCjAw
+    MDAwMjc1NTAgMDAwMDAgbg0KMDAwMDAyNzgwNiAwMDAwMCBuDQowMDAwMDI3OTYx
+    IDAwMDAwIG4NCjAwMDAwMjg4OTQgMDAwMDAgbg0KMDAwMDAyOTE1NiAwMDAwMCBu
+    DQowMDAwMDI5NDM2IDAwMDAwIG4NCjAwMDAwMjk1MDMgMDAwMDAgbg0KMDAwMDAy
+    OTY0MiAwMDAwMCBuDQowMDAwMDMwMzA1IDAwMDAwIG4NCjAwMDAwMjk4MjUgMDAw
+    MDAgbg0KMDAwMDAyOTk4NiAwMDAwMCBuDQowMDAwMDMwMTI3IDAwMDAwIG4NCjAw
+    MDAwMzAzNjggMDAwMDAgbg0KdHJhaWxlcgo8PAovU2l6ZSAyMg0KL1Jvb3QgMjEg
+    MCBSDQovSURbPDRjNjFjYWMyOWVhOTdhNGU5MDhhMmQzYmY3YzE1MTllPjw0YzYx
+    Y2FjMjllYTk3YTRlOTA4YTJkM2JmN2MxNTE5ZT5dDQovSW5mbyAxIDAgUg0KPj4N
+    CnN0YXJ0eHJlZg0KMzA0NzgNCiUlRU9GDQo=
+    ",
+    title: "Laboratoriumrapport"
+                    }
+                ],
+    result: [
+                    {
+    reference: "Observation/078cfb9b-6e54-4211-921b-efd898180b49"
+                    },
+                    {
+    reference: "Observation/735f3801-0de4-45a5-b537-b8f9aa871851"
+                    },
+                    {
+    reference: "Observation/b78399f9-cb79-49ae-95df-3210055377bf"
+                    }
+                ],
+    resultsInterpreter: [
+                    {
+    reference: "Practitioner/c6cf0c84-926c-44ca-8a74-09c7db4210c4"
+                    }
+                ],
+    specimen: [
+                    {
+    reference: "Specimen/0633584d-be97-4e53-8ddc-fe5cd5214ca2"
+                    },
+                    {
+    reference: "Specimen/03fc4255-7c38-49b8-a773-423ed4ad5293"
+                    },
+                    {
+    reference: "Specimen/e9ad0a4a-24ea-403f-9f7a-ccd42cedb2ef"
+                    }
+                ],
+    status: "amended",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:d1320832-79ac-4237-8e65-85df8e4df0ce",
+    resource: {
+    resourceType: "Patient",
+    address: [
+                    {
+    use: "home"
+                    }
+                ],
+    birthDate: "1990-01-02",
+    gender: "unknown",
+    id: "d1320832-79ac-4237-8e65-85df8e4df0ce",
+    identifier: [
+                    {
+    system: https: //cgm.com/MOLIS,
+    value: "17"
+                    },
+                    {
+    system: https: //www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin,
+    use: "official",
+    value: "00010299915"
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient
+                    ]
+                },
+    name: [
+                    {
+    family: "PatientName2",
+    given: [
+                            "Patient2"
+                        ],
+    use: "official"
+                    }
+                ]
+            }
+        },
+        {
+    fullUrl: "urn:uuid:9f52d93a-d0e4-4c6c-9fee-e6bf228132c4",
+    resource: {
+    resourceType: "ServiceRequest",
+    category: [
+                    {
+    coding: [
+                            {
+    code: "108252007",
+    display: "Laboratory procedure",
+    system: http: //snomed.info/sct
+                            }
+                        ]
+                    }
+                ],
+    id: "9f52d93a-d0e4-4c6c-9fee-e6bf228132c4",
+    identifier: [
+                    {
+    system: https: //cgm.com/MOLIS,
+    value: "013G050049"
+                    }
+                ],
+    intent: "order",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-servicerequest
+                    ]
+                },
+    priority: "routine",
+    requester: {
+    reference: "Practitioner/c6cf0c84-926c-44ca-8a74-09c7db4210c4"
+                },
+    status: "active",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:c6cf0c84-926c-44ca-8a74-09c7db4210c4",
+    resource: {
+    resourceType: "Practitioner",
+    id: "c6cf0c84-926c-44ca-8a74-09c7db4210c4",
+    identifier: [
+                    {
+    system: https: //www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi,
+    use: "official",
+    value: "10000007999"
+                    }
+                ],
+    name: [
+                    {
+    text: "MOLIS TEST",
+    use: "official"
+                    }
+                ]
+            }
+        },
+        {
+    fullUrl: "urn:uuid:dfad323b-e794-42de-aedc-01d63c3b97db",
+    resource: {
+    resourceType: "Organization",
+    address: [
+                    {
+    city: "Blégny",
+    country: "BE",
+    line: [
+                            "Rue Prés Champs 25B"
+                        ],
+    postalCode: "04 387 93 93",
+    use: "work"
+                    }
+                ],
+    id: "dfad323b-e794-42de-aedc-01d63c3b97db",
+    identifier: [
+                    {
+    system: https: //www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi,
+    use: "official",
+    value: "82470091998"
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization
+                    ]
+                },
+    name: "MOLIS",
+    telecom: [
+                    {
+    system: "phone",
+    use: "work",
+    value: "+32 (0) 4 387 93 93"
+                    },
+                    {
+    system: "fax",
+    use: "work",
+    value: "+32 (0) 4 387 93 50"
+                    },
+                    {
+    system: "email",
+    use: "work",
+    value: "info@cgm.com"
+                    },
+                    {
+    system: "url",
+    use: "work",
+    value: https: //www.cgm.com
+                    }
+                ]
+            }
+        },
+        {
+    fullUrl: "urn:uuid:078cfb9b-6e54-4211-921b-efd898180b49",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "23",
+    display: "Klinische chemie",
+    system: https: //cgm.com/MOLIS/SEQNB
+                        }
+                    ],
+    text: "Klinische chemie"
+                },
+    hasMember: [
+                    {
+    reference: "Observation/8580dda7-074c-46ca-8a50-8ae3727448dd"
+                    }
+                ],
+    id: "078cfb9b-6e54-4211-921b-efd898180b49",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    status: "unknown",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:8580dda7-074c-46ca-8a50-8ae3727448dd",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "2305",
+    display: "Biochemie",
+    system: https: //cgm.com/MOLIS/SEQNB
+                        }
+                    ],
+    text: "Biochemie"
+                },
+    hasMember: [
+                    {
+    reference: "Observation/35c036e1-a18f-41ba-85ab-36ea920f8160"
+                    }
+                ],
+    id: "8580dda7-074c-46ca-8a50-8ae3727448dd",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    status: "unknown",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:35c036e1-a18f-41ba-85ab-36ea920f8160",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "2345-7",
+    display: "Glucose",
+    system: http: //loinc.org
+                        },
+                        {
+    code: "GLU",
+    display: "Glucose",
+    system: https: //cgm.com/MOLIS/ANA
+                        }
+                    ],
+    text: "Glucose"
+                },
+    id: "35c036e1-a18f-41ba-85ab-36ea920f8160",
+    interpretation: [
+                    {
+    coding: [
+                            {
+    code: "N",
+    display: "Normal",
+    system: http: //terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+                            }
+                        ]
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    referenceRange: [
+                    {
+    high: {
+    code: "mg/dL",
+    system: http: //unitsofmeasure.org,
+    unit: "mg/dL",
+    value: 100
+                        },
+    low: {
+    code: "mg/dL",
+    system: http: //unitsofmeasure.org,
+    unit: "mg/dL",
+    value: 70
+                        },
+    text: "70 - 100"
+                    }
+                ],
+    specimen: {
+    reference: "Specimen/0633584d-be97-4e53-8ddc-fe5cd5214ca2"
+                },
+    status: "final",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                },
+    valueQuantity: {
+    code: "mg/dL",
+    system: http: //unitsofmeasure.org,
+    unit: "mg/dL",
+    value: 75
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:0633584d-be97-4e53-8ddc-fe5cd5214ca2",
+    resource: {
+    resourceType: "Specimen",
+    accessionIdentifier: {
+    system: https: //cgm.com/MOLIS/013G050049,
+    value: "0380551002"
+                },
+    id: "0633584d-be97-4e53-8ddc-fe5cd5214ca2",
+    identifier: [
+                    {
+    system: https: //cgm.com/MOLIS/013G050049,
+    value: "0380551002"
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory
+                    ]
+                },
+    receivedTime: "2023-07-31T11:39:08+02:00",
+    type: {
+    coding: [
+                        {
+    code: "878861003",
+    display: "Bloed",
+    system: http: //snomed.info/sct
+                        }
+                    ]
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:735f3801-0de4-45a5-b537-b8f9aa871851",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "26",
+    display: "Urine",
+    system: https: //cgm.com/MOLIS/SEQNB
+                        }
+                    ],
+    text: "Urine"
+                },
+    hasMember: [
+                    {
+    reference: "Observation/5cbe4bde-3d54-4ace-a858-2f5f1dea3952"
+                    }
+                ],
+    id: "735f3801-0de4-45a5-b537-b8f9aa871851",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    status: "unknown",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:5cbe4bde-3d54-4ace-a858-2f5f1dea3952",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "260F",
+    display: "Biochemie urine",
+    system: https: //cgm.com/MOLIS/SEQNB
+                        }
+                    ],
+    text: "Biochemie urine"
+                },
+    hasMember: [
+                    {
+    reference: "Observation/3d918ab0-55df-4b5e-99a9-e4e50c11b884"
+                    },
+                    {
+    reference: "Observation/7e1e1f93-6d13-461c-b2c3-a870e97189d8"
+                    },
+                    {
+    reference: "Observation/dd925015-352e-4121-93e6-3178a0da6ef2"
+                    }
+                ],
+    id: "5cbe4bde-3d54-4ace-a858-2f5f1dea3952",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    status: "unknown",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:3d918ab0-55df-4b5e-99a9-e4e50c11b884",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "28009-9",
+    display: "Specimen volume",
+    system: http: //loinc.org
+                        },
+                        {
+    code: "VOLUM",
+    display: "Collectevolume",
+    system: https: //cgm.com/MOLIS/ANA
+                        }
+                    ],
+    text: "Collectevolume"
+                },
+    id: "3d918ab0-55df-4b5e-99a9-e4e50c11b884",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    status: "final",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                },
+    valueQuantity: {
+    code: "mL",
+    system: http: //unitsofmeasure.org,
+    unit: "mL",
+    value: 75
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:7e1e1f93-6d13-461c-b2c3-a870e97189d8",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "2350-7",
+    display: "Glucose",
+    system: http: //loinc.org
+                        },
+                        {
+    code: "GLKWNU",
+    display: "Glucose: doseren",
+    system: https: //cgm.com/MOLIS/ANA
+                        }
+                    ],
+    text: "Glucose: doseren"
+                },
+    id: "7e1e1f93-6d13-461c-b2c3-a870e97189d8",
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    specimen: {
+    reference: "Specimen/03fc4255-7c38-49b8-a773-423ed4ad5293"
+                },
+    status: "final",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                },
+    valueQuantity: {
+    code: "g/L",
+    system: http: //unitsofmeasure.org,
+    unit: "g/L",
+    value: 5
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:03fc4255-7c38-49b8-a773-423ed4ad5293",
+    resource: {
+    resourceType: "Specimen",
+    accessionIdentifier: {
+    system: https: //cgm.com/MOLIS/013G050049,
+    value: "0380551003"
+                },
+    id: "03fc4255-7c38-49b8-a773-423ed4ad5293",
+    identifier: [
+                    {
+    system: https: //cgm.com/MOLIS/013G050049,
+    value: "0380551003"
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory
+                    ]
+                },
+    receivedTime: "2023-07-31T11:39:08+02:00",
+    type: {
+    coding: [
+                        {
+    code: "122575003",
+    system: http: //snomed.info/sct
+                        }
+                    ]
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:dd925015-352e-4121-93e6-3178a0da6ef2",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "2351-5",
+    display: "Glucose",
+    system: http: //loinc.org
+                        },
+                        {
+    code: "GLU24U",
+    display: "Glucose",
+    system: https: //cgm.com/MOLIS/ANA
+                        }
+                    ],
+    text: "Glucose"
+                },
+    id: "dd925015-352e-4121-93e6-3178a0da6ef2",
+    interpretation: [
+                    {
+    coding: [
+                            {
+    code: "N",
+    display: "Normal",
+    system: http: //terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+                            }
+                        ]
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    referenceRange: [
+                    {
+    high: {
+    code: "g/(24.h)",
+    system: http: //unitsofmeasure.org,
+    unit: "g/24h",
+    value: 0.5
+                        },
+    text: "< 0.50"
+                    }
+                ],
+    specimen: {
+    reference: "Specimen/03fc4255-7c38-49b8-a773-423ed4ad5293"
+                },
+    status: "final",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                },
+    valueQuantity: {
+    code: "g/(24.h)",
+    system: http: //unitsofmeasure.org,
+    unit: "g/24h",
+    value: 0.375
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:b78399f9-cb79-49ae-95df-3210055377bf",
+    resource: {
+    resourceType: "Observation",
+    code: {
+    coding: [
+                        {
+    code: "GLUC",
+    display: "Glucose",
+    system: https: //cgm.com/MOLIS/ANA
+                        }
+                    ],
+    text: "Glucose"
+                },
+    id: "b78399f9-cb79-49ae-95df-3210055377bf",
+    interpretation: [
+                    {
+    coding: [
+                            {
+    code: "N",
+    display: "Normal",
+    system: http: //terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+                            }
+                        ]
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory
+                    ]
+                },
+    performer: [
+                    {
+    reference: "Organization/dfad323b-e794-42de-aedc-01d63c3b97db"
+                    }
+                ],
+    referenceRange: [
+                    {
+    high: {
+    code: "mg/dL",
+    system: http: //unitsofmeasure.org,
+    unit: "mg/dL",
+    value: 70
+                        },
+    low: {
+    code: "mg/dL",
+    system: http: //unitsofmeasure.org,
+    unit: "mg/dL",
+    value: 40
+                        },
+    text: "40 - 70"
+                    }
+                ],
+    specimen: {
+    reference: "Specimen/e9ad0a4a-24ea-403f-9f7a-ccd42cedb2ef"
+                },
+    status: "final",
+    subject: {
+    reference: "Patient/d1320832-79ac-4237-8e65-85df8e4df0ce"
+                },
+    valueQuantity: {
+    code: "mg/dL",
+    system: http: //unitsofmeasure.org,
+    unit: "mg/dL",
+    value: 43
+                }
+            }
+        },
+        {
+    fullUrl: "urn:uuid:e9ad0a4a-24ea-403f-9f7a-ccd42cedb2ef",
+    resource: {
+    resourceType: "Specimen",
+    accessionIdentifier: {
+    system: https: //cgm.com/MOLIS/013G050049,
+    value: "0380551001"
+                },
+    id: "e9ad0a4a-24ea-403f-9f7a-ccd42cedb2ef",
+    identifier: [
+                    {
+    system: https: //cgm.com/MOLIS/013G050049,
+    value: "0380551001"
+                    }
+                ],
+    meta: {
+    profile: [
+    https: //www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory
+                    ]
+                },
+    receivedTime: "2023-07-31T11:39:08+02:00",
+    type: {
+    coding: [
+                        {
+    code: "CSV",
+    system: https: //cgm.com/MOLIS/TUBERECNB
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    identifier: {
+    system: https: //www.ehealth.fgov.be/lab-report/bundle-id,
+    value: "82470091998.287b13b3-6af6-4d66-aac8-08a8d8dc4c87"
+    },
+    timestamp: "2023-08-04T13:33:40.436+02:00",
+    type: "document"
+}
