@@ -1,0 +1,300 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="c3b36c20-0fff-44a0-bf48-6ef1b81f45a0"/>
+    <meta>
+        <lastUpdated value="2022-10-05T23:10:00.358+01:00"/>
+        <profile value="http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"/>
+    </meta>
+    <type value="message"/>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+        <resource>
+            <MessageHeader>
+                <id value="ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+                <event>
+                    <system value="http://spms.min-saude.pt/pnb/events"/>
+                    <code value="10705"/>
+                    <display value="MCDT_RESULTS_SYNCHRONIZATION"/>
+                </event>
+                <destination>
+                    <name value="RequiringApp"/>
+                    <endpoint value="SPMS/HEP"/>
+                </destination>
+                <destination>
+                    <name value="BDNR"/>
+                    <endpoint value="SPMS/BDNR"/>
+                </destination>
+                <receiver>
+                    <reference value="Organization/9999999"/>
+                    <display value="CS Exemplo"/>
+                </receiver>
+                <sender>
+                    <reference value="Organization/78e24234"/>
+                    <display value="LABORATÓRIO"/>
+                </sender>
+                <timestamp value="2022-10-05T23:10:00.358+01:00"/>
+                <source>
+                    <name value="CARDIOLOGIC"/>
+                    <endpoint value="101.20.15.12"/>
+                </source>
+                <focus>
+                    <reference value="DiagnosticReport/101"/>
+                </focus>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Patient/987654321"/>
+        <resource>
+            <Patient>
+                <id value="987654321"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="HC"/>
+                            <display value="Health Card Number"/>
+                        </coding>
+                        <text value="SNS"/>
+                    </type>
+                    <system value="http://spms.min-saude.pt/rnu/identifiers/patient-id"/>
+                    <value value="987654321"/>
+                </identifier>
+                <name>
+                    <text value="PAULO EXEMPLO DE NOME DA SILVA"/>
+                </name>
+                <gender value="male"/>
+                <birthDate value="1970-01-01"/>
+                <address>
+                    <text value="Rua de Exemplo, nº 99 9999-999 EXEMPLO"/>
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/DiagnosticReport/101"/>
+        <resource>
+            <DiagnosticReport>
+                <id value="101"/>
+                <meta>
+                    <security>
+                        <system value="http://hl7.org/fhir/v3/Confidentiality"/>
+                        <code value="R"/>
+                        <display value="Restricted"/>
+                    </security>
+                </meta>
+                <basedOn>
+                    <identifier>
+                        <system value="https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id"/>
+                        <value value="777881234"/>
+                    </identifier>
+                </basedOn>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas"/>
+                        <code value="A"/>
+                        <display value="Análises Clínicas"/>
+                    </coding>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v2/0074"/>
+                        <code value="LAB"/>
+                        <display value="Laboratory"/>
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/report-types"/>
+                        <code value="DRESP"/>
+                        <display value="Diagnostic Report for ESP"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/987654321"/>
+                </subject>
+                <issued value="2022-10-04T11:45:33+01:00"/>
+                <performer>
+                    <actor>
+                        <reference value="Organization/78e24234"/>
+                        <display value="LABORATÓRIO"/>
+                    </actor>
+                </performer>
+                <performer>
+                    <role>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="81464008"/>
+                            <display value="Clinical pathologist"/>
+                        </coding>
+                    </role>
+                    <actor>
+                        <reference value="Practitioner/99999"/>
+                        <display value="Dra. Remedios"/>
+                    </actor>
+                </performer>
+                <result>
+                    <reference value="Observation/item-2001000000005034600001"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600002"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600003"/>
+                </result>
+                <conclusion value="&lt;conclusão&gt;"/>
+            </DiagnosticReport>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="14563-1"/>
+                        <display value="Hemoglobin.gastrointestinal [Presence] in Stool --1st specimen"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado" />
+                        <code value="607.6"/>
+                        <display value="Sangue oculto nas fezes, fezes"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns" />
+                        <code value="22768"/>
+                        <display value="Sangue oculto nas fezes, fezes"/>
+                    </coding>
+                    <text value="Sangue oculto nas fezes, 1ª amostra"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260385"/>
+                        <display value="Negative"/>
+                    </coding>
+                    <text value="Negativo"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="14564-9"/>
+                        <display value="Hemoglobin.gastrointestinal [Presence] in Stool --2nd specimen"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado" />
+                        <code value="607.6"/>
+                        <display value="Sangue oculto nas fezes, fezes"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns" />
+                        <code value="22768"/>
+                        <display value="Sangue oculto nas fezes, fezes"/>
+                    </coding>
+                    <text value="Sangue oculto nas fezes, 2ª amostra"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260385"/>
+                        <display value="Negative"/>
+                    </coding>
+                    <text value="Negativo"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600003"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="14565-6"/>
+                        <display value="Hemoglobin.gastrointestinal [Presence] in Stool --3rd specimen"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado" />
+                        <code value="607.6"/>
+                        <display value="Sangue oculto nas fezes, fezes"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns" />
+                        <code value="22768"/>
+                        <display value="Sangue oculto nas fezes, fezes"/>
+                    </coding>
+                    <text value="Sangue oculto nas fezes, 3ª amostra"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260385"/>
+                        <display value="Negative"/>
+                    </coding>
+                    <text value="Negativo"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Practitioner/99999"/>
+        <resource>
+            <Practitioner>
+                <id value="99999"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="MD"/>
+                            <display value="Medical License number"/>
+                        </coding>
+                    </type>
+                    <system value="http://www.ordemdosmedicos.pt"/>
+                    <value value="99999"/>
+                </identifier>
+                <name>
+                    <text value="Dra. Remedios"/>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/9999999"/>
+        <resource>
+            <Organization>
+                <id value="9999999"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/entity-id"/>
+                    <value value="9999999"/>
+                </identifier>
+                <name value="CS Exemplo"/>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/78e24234"/>
+        <resource>
+            <Organization>
+                <id value="78e24234"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/providing-entity-id"/>
+                    <value value="78e24234"/>
+                </identifier>
+                <name value="LABORATÓRIO"/>
+            </Organization>
+        </resource>
+    </entry>
+</Bundle>

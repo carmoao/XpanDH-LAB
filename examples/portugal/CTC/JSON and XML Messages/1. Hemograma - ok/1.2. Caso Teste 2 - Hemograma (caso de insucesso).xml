@@ -1,0 +1,907 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="c3b36c20-0fff-44a0-bf48-6ef1b81f45a0"/>
+    <meta>
+        <lastUpdated value="2022-10-05T23:10:00.358+01:00"/>
+        <profile value="http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"/>
+    </meta>
+    <type value="message"/>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+        <resource>
+            <MessageHeader>
+                <id value="ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+                <event>
+                    <system value="http://spms.min-saude.pt/pnb/events"/>
+                    <code value="10705"/>
+                    <display value="MCDT_RESULTS_SYNCHRONIZATION"/>
+                </event>
+                <destination>
+                    <name value="RequiringApp"/>
+                    <endpoint value="SPMS/HEP"/>
+                </destination>
+                <destination>
+                    <name value="BDNR"/>
+                    <endpoint value="SPMS/BDNR"/>
+                </destination>
+                <receiver>
+                    <reference value="Organization/9999999"/>
+                    <display value="CS Exemplo"/>
+                </receiver>
+                <sender>
+                    <reference value="Organization/78e24234"/>
+                    <display value="LABORATÓRIO"/>
+                </sender>
+                <timestamp value="2022-10-05T23:10:00.358+01:00"/>
+                <source>
+                    <name value="CARDIOLOGIC"/>
+                    <endpoint value="101.20.15.12"/>
+                </source>
+                <focus>
+                    <reference value="DiagnosticReport/101"/>
+                </focus>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Patient/987654321"/>
+        <resource>
+            <Patient>
+                <id value="987654321"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="HC"/>
+                            <display value="Health Card Number"/>
+                        </coding>
+                        <text value="SNS"/>
+                    </type>
+                    <system value="http://spms.min-saude.pt/rnu/identifiers/patient-id"/>
+                    <value value="987654321"/>
+                </identifier>
+                <name>
+                    <text value="PAULO EXEMPLO DE NOME DA SILVA"/>
+                </name>
+                <gender value="male"/>
+                <birthDate value="1970-01-01"/>
+                <address>
+                    <text value="Rua de Exemplo, nº 99 9999-999 EXEMPLO"/>
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/DiagnosticReport/101"/>
+        <resource>
+            <DiagnosticReport>
+                <id value="101"/>
+                <meta>
+                    <security>
+                        <system value="http://hl7.org/fhir/v3/Confidentiality"/>
+                        <code value="R"/>
+                        <display value="Restricted"/>
+                    </security>
+                </meta>
+                <basedOn>
+                    <identifier>
+                        <system value="https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id"/>
+                        <value value="777881234"/>
+                    </identifier>
+                </basedOn>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas"/>
+                        <code value="A"/>
+                        <display value="Análises Clínicas"/>
+                    </coding>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v2/0074"/>
+                        <code value="LAB"/>
+                        <display value="Laboratory"/>
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/report-types"/>
+                        <code value="DRESP"/>
+                        <display value="Diagnostic Report for ESP"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/987654321"/>
+                </subject>
+                <issued value="2022-10-04T11:45:33+01:00"/>
+                <performer>
+                    <actor>
+                        <reference value="Organization/78e24234"/>
+                        <display value="LABORATÓRIO"/>
+                    </actor>
+                </performer>
+                <performer>
+                    <role>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="81464008"/>
+                            <display value="Clinical pathologist"/>
+                        </coding>
+                    </role>
+                    <actor>
+                        <reference value="Practitioner/99999"/>
+                        <display value="Dra. Remedios"/>
+                    </actor>
+                </performer>
+                <result>
+                    <reference value="Observation/item-2001000000005034600001"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600002"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600003"/>
+                </result>
+                <conclusion value="&lt;conclusão&gt;"/>
+            </DiagnosticReport>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="48809-8"/>
+                        <display value="Erythrogram panel - Blood"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1080.9"/>
+                        <display value="Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="24209"/>
+                        <display value="Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"/>
+                    </coding>
+                    <text value="Eritrograma, sangue"/>
+                </code>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600001.1"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600001.2"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600001.3"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600001.4"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600001.5"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600001.6"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600001.7"/>
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.1"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001.1"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="718-7"/>
+                        <display value="Hemoglobin [Mass/volume] in Blood"/>
+                    </coding>
+                    <text value="Hemoglobina no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="15.5"/>
+                    <unit value="g/dL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="g/dL"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="12.0"/>
+                    </low>
+                    <high>
+                        <value value="15.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.2"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001.2"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="789-8"/>
+                        <display value="Erythrocytes  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Eritrócitos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="6.00"/>
+                    <unit value="10*6/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*6/uL"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="3.80"/>
+                    </low>
+                    <high>
+                        <value value="4.80"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.3"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001.3"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="4544-3"/>
+                        <display value="Hematocrit [Volume Fraction] of Blood by Automated count"/>
+                    </coding>
+                    <text value="Hematócrito no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="44.0"/>
+                    <unit value="%"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="%"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="36.0"/>
+                    </low>
+                    <high>
+                        <value value="46.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.4"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001.4"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="787-2"/>
+                        <display value="MCV [Entitic volume] by Automated count"/>
+                    </coding>
+                    <text value="VGM no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="78.0"/>
+                    <unit value="fL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="fL"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="80.0"/>
+                    </low>
+                    <high>
+                        <value value="97.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.5"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001.5"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="785-6"/>
+                        <display value="MCH [Entitic mass] by Automated count"/>
+                    </coding>
+                    <text value="HGM no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="27.3"/>
+                    <unit value="pg"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="pg"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="27.0"/>
+                    </low>
+                    <high>
+                        <value value="32.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.6"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001.6"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="786-4"/>
+                        <display value="MCHC [Mass/volume] by Automated count"/>
+                    </coding>
+                    <text value="CMHG no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="34.3"/>
+                    <unit value="g/dL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="g/dL"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="32.0"/>
+                    </low>
+                    <high>
+                        <value value="36.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.7"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001.7"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="788-0"/>
+                        <display value="Erythrocyte distribution width [Ratio] by Automated count"/>
+                    </coding>
+                    <text value="RDW no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="21.4"/>
+                    <unit value="%"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="%"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="11.6"/>
+                    </low>
+                    <high>
+                        <value value="14.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="48808-0"/>
+                        <display value="Leukogram panel - Blood"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1080.9"/>
+                        <display value="Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="24209"/>
+                        <display value="Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"/>
+                    </coding>
+                    <text value="Leucograma sangue"/>
+                </code>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600002.1"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600002.2"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600002.3"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600002.4"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600002.5"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600002.6"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600002.7"/>
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.1"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.1"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="6690-2"/>
+                        <display value="Leukocytes  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Leucócitos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="5.9"/>
+                    <unit value="10*3/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*3/uL"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="4.0"/>
+                    </low>
+                    <high>
+                        <value value="10.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.2"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.2"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="770-8"/>
+                        <display value="Neutrophils  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Neutrófilos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="2.35"/>
+                    <unit value="10*3/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*3/uL"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.3"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.3"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="751-8"/>
+                        <display value="Neutrophils/100 leukocytes in Blood by Automated count"/>
+                    </coding>
+                    <text value="Neutrófilos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="40.1"/>
+                    <unit value="%"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="%"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="40.0"/>
+                    </low>
+                    <high>
+                        <value value="80.0"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.4"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.4"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="713-8"/>
+                        <display value="Eosinophils  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Eosinófilos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="0.08"/>
+                    <unit value="10*3/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*3/uL"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.5"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.5"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="711-2"/>
+                        <display value="Eosinophils/100 leukocytes in Blood by Automated count"/>
+                    </coding>
+                    <text value="Eosinófilos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="1.4"/>
+                    <unit value="%"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="%"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="1.00"/>
+                    </low>
+                    <high>
+                        <value value="6.00"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.6"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.6"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="706-2"/>
+                        <display value="Basophils  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Basófilos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="0.04"/>
+                    <unit value="10*3/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*3/uL"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.7"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.7"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="704-7"/>
+                        <display value="Basophils/100 leukocytes in Blood by Automated count"/>
+                    </coding>
+                    <text value="Basófilos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="0.7"/>
+                    <unit value="%"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="%"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="0.00"/>
+                    </low>
+                    <high>
+                        <value value="2.00"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.8"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.8"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="736-9"/>
+                        <display value="Lymphocytes  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Linfócitos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="2.78"/>
+                    <unit value="10*3/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*3/uL"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.9"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.9"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="731-0"/>
+                        <display value="Lymphocytes/100 leukocytes in Blood by Automated count"/>
+                    </coding>
+                    <text value="Linfócitos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="47.5"/>
+                    <unit value="%"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="%"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="20.00"/>
+                    </low>
+                    <high>
+                        <value value="40.00"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.10"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.10"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5905-5"/>
+                        <display value="Monocytes  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Monócitos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="0.60"/>
+                    <unit value="10*3/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*3/uL"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.11"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002.11"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="742-7"/>
+                        <display value="Monocytes/100 leukocytes in Blood by Automated count"/>
+                    </coding>
+                    <text value="Monócitos no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="10.3"/>
+                    <unit value="%"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="%"/>
+                </valueQuantity>
+                <referenceRange>
+                    <low>
+                        <value value="2.00"/>
+                    </low>
+                    <high>
+                        <value value="10.00"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600003"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="53800-9"/>
+                        <display value="Platelets panel - Blood by Automated count"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1080.9"/>
+                        <display value="Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="24209"/>
+                        <display value="Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"/>
+                    </coding>
+                    <text value="Trombocitograma no sangue"/>
+                </code>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600003.1"/>
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003.1"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600003.1"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="777-3"/>
+                        <display value="Platelets  in Blood by Automated count"/>
+                    </coding>
+                    <text value="Plaquetas no sangue"/>
+                </code>
+                <valueQuantity>
+                    <value value="205"/>
+                    <unit value="10*3/µL"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="10*3/uL"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Practitioner/99999"/>
+        <resource>
+            <Practitioner>
+                <id value="99999"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="MD"/>
+                            <display value="Medical License number"/>
+                        </coding>
+                    </type>
+                    <system value="http://www.ordemdosmedicos.pt"/>
+                    <value value="99999"/>
+                </identifier>
+                <name>
+                    <text value="Dra. Remedios"/>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/9999999"/>
+        <resource>
+            <Organization>
+                <id value="9999999"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/entity-id"/>
+                    <value value="9999999"/>
+                </identifier>
+                <name value="CS Exemplo"/>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/78e24234"/>
+        <resource>
+            <Organization>
+                <id value="78e24234"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/providing-entity-id"/>
+                    <value value="78e24234"/>
+                </identifier>
+                <name value="LABORATÓRIO"/>
+            </Organization>
+        </resource>
+    </entry>
+</Bundle>

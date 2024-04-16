@@ -1,0 +1,996 @@
+{
+    "resourceType": "Bundle",
+    "id": "c3b36c20-0fff-44a0-bf48-6ef1b81f45a0",
+     "meta": {
+        "lastUpdated": "2022-10-05T23:10:00.358+01:00",
+        "profile": [
+            "http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"
+        ]
+    },
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "ac185937-cc34-4e42-9459-ae5e1306c34d",
+                "event": {
+                    "system": "http://spms.min-saude.pt/pnb/events",
+                    "code": "10705",
+                    "display": "MCDT_RESULTS_SYNCHRONIZATION"
+                },
+                "destination": [
+                    {
+                        "name": "RequiringApp",
+                        "endpoint": "SPMS/HEP"
+                    },
+                    {
+                        "name": "BDNR",
+                        "endpoint": "SPMS/BDNR"
+                    }
+                ],
+                "receiver": {
+                    "reference": "Organization/9999999",
+                    "display": "CS Exemplo"
+                },
+                "sender": {
+                    "reference": "Organization/78e24234",
+                    "display": "LABORATÓRIO"
+                },
+                "timestamp": "2022-10-05T23:10:00.358+01:00",
+                "source": {
+                    "name": "CARDIOLOGIC",
+                    "endpoint": "101.20.15.12"
+                },
+                "focus": [
+                    {
+                        "reference": "DiagnosticReport/101"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Patient/987654321",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "987654321",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "HC",
+                                    "display": "Health Card Number"
+                                }
+                            ],
+                            "text": "SNS"
+                        },
+                        "system": "http://spms.min-saude.pt/rnu/identifiers/patient-id",
+                        "value": "987654321"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "PAULO EXEMPLO DE NOME DA SILVA"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1970-01-01",
+                "address": [
+                    {
+                        "text": "Rua de Exemplo, nº 99 9999-999 EXEMPLO"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/DiagnosticReport/101",
+            "resource": {
+                "resourceType": "DiagnosticReport",
+                "id": "101",
+                "meta": {
+                    "security": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/Confidentiality",
+                            "code": "R",
+                            "display": "Restricted"
+                        }
+                    ]
+                },
+                "basedOn": [
+                    {
+                        "identifier": {
+                            "system": "https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id",
+                            "value": "777881234"
+                        }
+                    }
+                ],
+                "status": "final",
+                "category": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas",
+                            "code": "A",
+                            "display": "Análises Clínicas"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/v2/0074",
+                            "code": "LAB",
+                            "display": "Laboratory"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/report-types",
+                            "code": "DRESP",
+                            "display": "Diagnostic Report for ESP"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/987654321"
+                },
+                "issued": "2022-10-04T11:45:33+01:00",
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "Organization/78e24234",
+                            "display": "LABORATÓRIO"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "81464008",
+                                    "display": "Clinical pathologist"
+                                }
+                            ]
+                        },
+                        "actor": {
+                            "reference": "Practitioner/99999",
+                            "display": "Dra. Remedios"
+                        }
+                    }
+                ],
+                "result": [
+                    {
+                        "reference": "Observation/item-2001000000005034600001"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600002"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600003"
+                    }
+                ],
+                "conclusion": "<conclusão>"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "48809-8",
+                            "display": "Erythrogram panel - Blood"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1080.9",
+                            "display": "Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "24209",
+                            "display": "Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"
+                        }
+                    ],
+                    "text": "Eritrograma, sangue"
+                },
+                "related": [
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600001.1"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600001.2"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600001.3"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600001.4"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600001.5"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600001.6"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600001.7"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "718-7",
+                            "display": "Hemoglobin [Mass/volume] in Blood"
+                        }
+                    ],
+                    "text": "Hemoglobina no sangue"
+                },
+                "valueQuantity": {
+                    "value": 15.5,
+                    "unit": "g/dL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "g/dL"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 12.0
+                        },
+                        "high": {
+                            "value": 15.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.2",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.2",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "789-8",
+                            "display": "Erythrocytes  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Eritrócitos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 6.00,
+                    "unit": "10*6/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*6/uL"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 3.80
+                        },
+                        "high": {
+                            "value": 4.80
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.3",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.3",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "4544-3",
+                            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+                        }
+                    ],
+                    "text": "Hematócrito no sangue"
+                },
+                "valueQuantity": {
+                    "value": 44.0,
+                    "unit": "%",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "%"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 36.0
+                        },
+                        "high": {
+                            "value": 46.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.4",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.4",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "787-2",
+                            "display": "MCV [Entitic volume] by Automated count"
+                        }
+                    ],
+                    "text": "VGM no sangue"
+                },
+                "valueQuantity": {
+                    "value": 78.0,
+                    "unit": "fL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "fL"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 80.0
+                        },
+                        "high": {
+                            "value": 97.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.5",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.5",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "785-6",
+                            "display": "MCH [Entitic mass] by Automated count"
+                        }
+                    ],
+                    "text": "HGM no sangue"
+                },
+                "valueQuantity": {
+                    "value": 27.3,
+                    "unit": "pg",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "pg"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 27.0
+                        },
+                        "high": {
+                            "value": 32.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.6",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.6",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "786-4",
+                            "display": "MCHC [Mass/volume] by Automated count"
+                        }
+                    ],
+                    "text": "CMHG no sangue"
+                },
+                "valueQuantity": {
+                    "value": 34.3,
+                    "unit": "g/dL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "g/dL"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 32.0
+                        },
+                        "high": {
+                            "value": 36.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.7",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.7",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "788-0",
+                            "display": "Erythrocyte distribution width [Ratio] by Automated count"
+                        }
+                    ],
+                    "text": "RDW no sangue"
+                },
+                "valueQuantity": {
+                    "value": 21.4,
+                    "unit": "%",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "%"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 11.6
+                        },
+                        "high": {
+                            "value": 14.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "48808-0",
+                            "display": "Leukogram panel - Blood"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1080.9",
+                            "display": "Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "24209",
+                            "display": "Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"
+                        }
+                    ],
+                    "text": "Leucograma sangue"
+                },
+                "related": [
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600002.1"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600002.2"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600002.3"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600002.4"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600002.5"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600002.6"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600002.7"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "6690-2",
+                            "display": "Leukocytes  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Leucócitos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 5.9,
+                    "unit": "10*3/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*3/uL"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 4.0
+                        },
+                        "high": {
+                            "value": 10.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.2",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.2",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "770-8",
+                            "display": "Neutrophils  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Neutrófilos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 2.35,
+                    "unit": "10*3/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*3/uL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.3",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.3",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "751-8",
+                            "display": "Neutrophils/100 leukocytes in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Neutrófilos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 40.1,
+                    "unit": "%",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "%"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 40.0
+                        },
+                        "high": {
+                            "value": 80.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.4",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.4",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "713-8",
+                            "display": "Eosinophils  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Eosinófilos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 0.08,
+                    "unit": "10*3/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*3/uL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.5",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.5",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "711-2",
+                            "display": "Eosinophils/100 leukocytes in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Eosinófilos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 1.4,
+                    "unit": "%",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "%"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 1.00
+                        },
+                        "high": {
+                            "value": 6.00
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.6",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.6",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "706-2",
+                            "display": "Basophils  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Basófilos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 0.04,
+                    "unit": "10*3/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*3/uL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.7",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.7",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "704-7",
+                            "display": "Basophils/100 leukocytes in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Basófilos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 0.7,
+                    "unit": "%",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "%"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 0.00
+                        },
+                        "high": {
+                            "value": 2.00
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.8",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.8",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "736-9",
+                            "display": "Lymphocytes  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Linfócitos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 2.78,
+                    "unit": "10*3/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*3/uL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.9",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.9",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "731-0",
+                            "display": "Lymphocytes/100 leukocytes in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Linfócitos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 47.5,
+                    "unit": "%",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "%"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 20.00
+                        },
+                        "high": {
+                            "value": 40.00
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.10",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.10",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5905-5",
+                            "display": "Monocytes  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Monócitos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 0.60,
+                    "unit": "10*3/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*3/uL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002.11",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002.11",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "742-7",
+                            "display": "Monocytes/100 leukocytes in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Monócitos no sangue"
+                },
+                "valueQuantity": {
+                    "value": 10.3,
+                    "unit": "%",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "%"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 2.00
+                        },
+                        "high": {
+                            "value": 10.00
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600003",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "53800-9",
+                            "display": "Platelets panel - Blood by Automated count"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1080.9",
+                            "display": "Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "24209",
+                            "display": "Hemograma com fórmula leucocitária (eritrograma, contagem de leucócitos, contagem de plaquetas, fórmula leucocitária e morfologia), s"
+                        }
+                    ],
+                    "text": "Trombocitograma no sangue"
+                },
+                "related": [
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600003.1"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600003.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "777-3",
+                            "display": "Platelets  in Blood by Automated count"
+                        }
+                    ],
+                    "text": "Plaquetas no sangue"
+                },
+                "valueQuantity": {
+                    "value": 205,
+                    "unit": "10*3/µL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "10*3/uL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Practitioner/99999",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "99999",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "MD",
+                                    "display": "Medical License number"
+                                }
+                            ]
+                        },
+                        "system": "http://www.ordemdosmedicos.pt",
+                        "value": "99999"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "Dra. Remedios"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/9999999",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "9999999",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/entity-id",
+                        "value": "9999999"
+                    }
+                ],
+                "name": "CS Exemplo"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/78e24234",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "78e24234",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/providing-entity-id",
+                        "value": "78e24234"
+                    }
+                ],
+                "name": "LABORATÓRIO"
+            }
+        }
+    ]
+}

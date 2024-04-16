@@ -1,0 +1,981 @@
+{
+    "resourceType": "Bundle",
+    "id": "c3b36c20-0fff-44a0-bf48-6ef1b81f45a0",
+    "meta": {
+        "lastUpdated": "2022-10-05T23:10:00.358+01:00",
+        "profile": [
+             "http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"
+        ]
+    },
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "ac185937-cc34-4e42-9459-ae5e1306c34d",
+                "event": {
+                    "system": "http://spms.min-saude.pt/pnb/events",
+                    "code": "10705",
+                    "display": "MCDT_RESULTS_SYNCHRONIZATION"
+                },
+                "destination": [
+                    {
+                        "name": "RequiringApp",
+                        "endpoint": "SPMS/HEP"
+                    },
+                    {
+                        "name": "BDNR",
+                        "endpoint": "SPMS/BDNR"
+                    }
+                ],
+                "receiver": {
+                    "reference": "Organization/9999999",
+                    "display": "CS Exemplo"
+                },
+                "sender": {
+                    "reference": "Organization/78e24234",
+                    "display": "LABORATÓRIO"
+                },
+                "timestamp": "2022-10-05T23:10:00.358+01:00",
+                "source": {
+                    "name": "CARDIOLOGIC",
+                    "endpoint": "101.20.15.12"
+                },
+                "focus": [
+                    {
+                        "reference": "DiagnosticReport/101"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Patient/987654321",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "987654321",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "HC",
+                                    "display": "Health Card Number"
+                                }
+                            ],
+                            "text": "SNS"
+                        },
+                        "system": "http://spms.min-saude.pt/rnu/identifiers/patient-id",
+                        "value": "987654321"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "PAULO EXEMPLO DE NOME DA SILVA"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1970-01-01",
+                "address": [
+                    {
+                        "text": "Rua de Exemplo, nº 99 9999-999 EXEMPLO"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/DiagnosticReport/101",
+            "resource": {
+                "resourceType": "DiagnosticReport",
+                "id": "101",
+                "meta": {
+                    "security": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/Confidentiality",
+                            "code": "R",
+                            "display": "Restricted"
+                        }
+                    ]
+                },
+                "basedOn": [
+                    {
+                        "identifier": {
+                            "system": "https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id",
+                            "value": "777881234"
+                        }
+                    }
+                ],
+                "status": "final",
+                "category": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas",
+                            "code": "A",
+                            "display": "Análises Clínicas"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/v2/0074",
+                            "code": "LAB",
+                            "display": "Laboratory"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/report-types",
+                            "code": "DRESP",
+                            "display": "Diagnostic Report for ESP"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/987654321"
+                },
+                "issued": "2022-10-04T11:45:33+01:00",
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "Organization/78e24234",
+                            "display": "LABORATÓRIO"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "81464008",
+                                    "display": "Clinical pathologist"
+                                }
+                            ]
+                        },
+                        "actor": {
+                            "reference": "Practitioner/99999",
+                            "display": "Dra. Remedios"
+                        }
+                    }
+                ],
+                "result": [
+                    {
+                        "reference": "Observation/item-2001000000005034600001"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600002"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600003"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600004"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600005"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600006"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600007"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600008"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600009"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000010"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000011"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000012"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000013"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000014"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000015"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000016"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000017"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000018"
+                    },
+                    {
+                        "reference": "Observation/item-20010000000050346000019"
+                    }
+                ],
+                "conclusion": "<conclusão>"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5778-6",
+                            "display": "Color of Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Cor, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.9",
+                            "code": "40731000284103",
+                            "display": "Pale yellow color"
+                        }
+                    ],
+                    "text": "Amarelo pálido"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5767-9",
+                            "display": "Appearance of Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Aspeto, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.17",
+                            "code": "167236000",
+                            "display": "Urine looks clear"
+                        }
+                    ],
+                    "text": "Límpida"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600003",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5803-2",
+                            "display": "pH of Urine by Test strip"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "pH, urina"
+                },
+                "valueQuantity": {
+                    "value": 5,
+                    "unit": "pH",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "[pH]"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600004",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600004",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5811-5",
+                            "display": "Specific gravity of Urine by Test strip"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Densidade, urina"
+                },
+                "valueQuantity": {
+                    "value": 1.014,
+                    "unit": "Densidade",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "{Specgrav}"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600005",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600005",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "32710-6",
+                            "display": "Nitrite [Presence] in Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Nitritos, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "display": "Negative"
+                        }
+                    ],
+                    "text": "Negativo"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600006",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600006",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2887-8",
+                            "display": "Protein [Presence] in Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Proteínas, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "260415000",
+                            "display": "Not detected"
+                        }
+                    ],
+                    "text": "Não detetado"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2887-8",
+                            "display": "Glucose [Presence] in Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Glicose, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "260415000",
+                            "display": "Not detected"
+                        }
+                    ],
+                    "text": "Não detetado"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "33903-6",
+                            "display": "Ketones [Presence] in Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Cetonas, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "260415000",
+                            "display": "Not detected"
+                        }
+                    ],
+                    "text": "Não detetado"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600009",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600009",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "33903-6",
+                            "display": "Urobilinogen [Presence] in Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Urobilinogénio, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "17621005",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000010",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000010",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "1977-8",
+                            "display": "Bilirubin.total [Presence] in Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Bilirubina total, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "260415000",
+                            "display": "Not detected"
+                        }
+                    ],
+                    "text": "Não detetado"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000011",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000011",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "725-2",
+                            "display": "Hemoglobin [Presence] in Urine"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Hemoglubina, urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "260415000",
+                            "display": "Not detected"
+                        }
+                    ],
+                    "text": "Não detetado"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000012",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000012",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "58438-3",
+                            "display": "Cells [Type] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Células, no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.5",
+                            "code": "4212006",
+                            "display": "Epithelial cell"
+                        }
+                    ],
+                    "text": "Células Epiteliais"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000013",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000013",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "58438-3",
+                            "display": "Cells [Type] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Células, no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.5",
+                            "code": "52501007",
+                            "display": "Leukocyte"
+                        }
+                    ],
+                    "text": "Leucócitos"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000014",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000014",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "58438-3",
+                            "display": "Cells [Type] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Células, no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.5",
+                            "code": "41898006",
+                            "display": "Erythrocyte"
+                        }
+                    ],
+                    "text": "Eritrócitos"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000015",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000015",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5782-8",
+                            "display": "Crystals [type] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Cristais, no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.11",
+                            "code": "250456004",
+                            "display": "Urate crystal"
+                        }
+                    ],
+                    "text": "Cristal de urato"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000016",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000016",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "58436-7",
+                            "display": "Casts [Type] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Cilindros, no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.4",
+                            "code": "250456004",
+                            "display": "Urine microscopy: hyaline casts"
+                        }
+                    ],
+                    "text": "Microscopia de urina: cilindros hialinos"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000017",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000017",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5787-7",
+                            "display": "Epithelial cells [#/area] in Urine sediment by Microscopy high power field"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Células epiteliais, no sedimento urinário"
+                },
+                "valueQuantity": {
+                    "value": 4,
+                    "unit": "/campo",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "/{field}"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000018",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000018",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "5787-7",
+                            "display": "Leukocytes [#/area] in Urine sediment by Microscopy high power field"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Leucócitos, no sedimento urinário"
+                },
+                "valueQuantity": {
+                    "value": 1,
+                    "comparator": "<",
+                    "unit": "/campo",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "/{field}"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000019",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-20010000000050346000019",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "13945-1",
+                            "display": "Erythrocytes [#/area] in Urine sediment by Microscopy high power field"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "627.0",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22954",
+                            "display": "Urina, análise sumária (inclui análise do sedimento)"
+                        }
+                    ],
+                    "text": "Eritrócitos, no sedimento urinário"
+                },
+                "valueQuantity": {
+                    "value": 1,
+                    "comparator": "<",
+                    "unit": "/campo",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "/{field}"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Practitioner/99999",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "99999",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "MD",
+                                    "display": "Medical License number"
+                                }
+                            ]
+                        },
+                        "system": "http://www.ordemdosmedicos.pt",
+                        "value": "99999"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "Dra. Remedios"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/9999999",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "9999999",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/entity-id",
+                        "value": "9999999"
+                    }
+                ],
+                "name": "CS Exemplo"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/78e24234",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "78e24234",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/providing-entity-id",
+                        "value": "78e24234"
+                    }
+                ],
+                "name": "LABORATÓRIO"
+            }
+        }
+    ]
+}

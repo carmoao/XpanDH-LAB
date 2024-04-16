@@ -1,0 +1,423 @@
+{
+    "resourceType": "Bundle",
+    "id": "c3b36c20-0fff-44a0-bf48-6ef1b81f45a0",
+    "meta": {
+        "lastUpdated": "2022-10-05T23:10:00.358+01:00",
+        "profile": [
+             "http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"
+        ]
+    },
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "ac185937-cc34-4e42-9459-ae5e1306c34d",
+                "event": {
+                    "system": "http://spms.min-saude.pt/pnb/events",
+                    "code": "10705",
+                    "display": "MCDT_RESULTS_SYNCHRONIZATION"
+                },
+                "destination": [
+                    {
+                        "name": "RequiringApp",
+                        "endpoint": "SPMS/HEP"
+                    },
+                    {
+                        "name": "BDNR",
+                        "endpoint": "SPMS/BDNR"
+                    }
+                ],
+                "receiver": {
+                    "reference": "Organization/9999999",
+                    "display": "CS Exemplo"
+                },
+                "sender": {
+                    "reference": "Organization/78e24234",
+                    "display": "LABORATÓRIO"
+                },
+                "timestamp": "2022-10-05T23:10:00.358+01:00",
+                "source": {
+                    "name": "CARDIOLOGIC",
+                    "endpoint": "101.20.15.12"
+                },
+                "focus": [
+                    {
+                        "reference": "DiagnosticReport/101"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Patient/987654321",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "987654321",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "HC",
+                                    "display": "Health Card Number"
+                                }
+                            ],
+                            "text": "SNS"
+                        },
+                        "system": "http://spms.min-saude.pt/rnu/identifiers/patient-id",
+                        "value": "987654321"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "PAULO EXEMPLO DE NOME DA SILVA"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1970-01-01",
+                "address": [
+                    {
+                        "text": "Rua de Exemplo, nº 99 9999-999 EXEMPLO"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/DiagnosticReport/101",
+            "resource": {
+                "resourceType": "DiagnosticReport",
+                "id": "101",
+                "meta": {
+                    "security": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/Confidentiality",
+                            "code": "R",
+                            "display": "Restricted"
+                        }
+                    ]
+                },
+                "basedOn": [
+                    {
+                        "identifier": {
+                            "system": "https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id",
+                            "value": "777881234"
+                        }
+                    }
+                ],
+                "status": "final",
+                "category": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas",
+                            "code": "A",
+                            "display": "Análises Clínicas"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/v2/0074",
+                            "code": "LAB",
+                            "display": "Laboratory"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/report-types",
+                            "code": "DRESP",
+                            "display": "Diagnostic Report for ESP"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/987654321"
+                },
+                "issued": "2022-10-04T11:45:33+01:00",
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "Organization/78e24234",
+                            "display": "LABORATÓRIO"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "81464008",
+                                    "display": "Clinical pathologist"
+                                }
+                            ]
+                        },
+                        "actor": {
+                            "reference": "Practitioner/99999",
+                            "display": "Dra. Remedios"
+                        }
+                    }
+                ],
+                "result": [
+                    {
+                        "reference": "Observation/item-2001000000005034600001.1"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600001.2"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600001.3"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600001.4"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600001.5"
+                    }
+                ],
+                "conclusion": "<conclusão>"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "1558-6",
+                            "display": "Fasting glucose [Mass/volume] in Serum or Plasma"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "710.2",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22718",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        }
+                    ],
+                    "text": "Glicose em jejum no soro ou plasma"
+                },
+                "valueQuantity": {
+                    "value": 114,
+                    "unit": "mg/dL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "mg/dL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.2",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.2",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "27873-9",
+                            "display": "Insulin [Units/volume] in Serum or Plasma --fasting"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "710.2",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22718",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        }
+                    ],
+                    "text": "Insulina em jejum no soro ou plasma"
+                },
+                "valueQuantity": {
+                    "value": 6.13,
+                    "unit": "µI.U./mL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "u[IU]/mL"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.3",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.3",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "14995-5 ",
+                            "display": "Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "710.2",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22718",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        }
+                    ],
+                    "text": "Glucose no soro ou plasma --2 h após 75 g de glucose PO"
+                },
+                "valueQuantity": {
+                    "value": 6.8,
+                    "unit": "mmol/L",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "mmol/L"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.4",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.4",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "1518-0",
+                            "display": "Glucose [Mass/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "710.2",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22718",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        }
+                    ],
+                    "text": "Glucose no soro ou plasma --2 h após 75 g de glucose PO "
+                },
+                "valueQuantity": {
+                    "value": 120.0,
+                    "unit": "mg/dL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "mg/dL"
+                },
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 70
+                        },
+                        "high": {
+                            "value": 110
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001.5",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001.5",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "27860-6",
+                            "display": "Insulin [Units/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "710.2",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "22718",
+                            "display": "Prova de tolerância à glucose, doseamentos de insulina e glucose, cada doseamento"
+                        }
+                    ],
+                    "text": "Insulina, no soro ou plasma -- 2h após 75g de glucose PO"
+                },
+                "valueQuantity": {
+                    "value": 50.7,
+                    "unit": "µI.U./mL",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "u[IU]/mL"
+                },
+                "referenceRange": [
+                    {
+                        "high": {
+                            "value": 150
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Practitioner/99999",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "99999",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "MD",
+                                    "display": "Medical License number"
+                                }
+                            ]
+                        },
+                        "system": "http://www.ordemdosmedicos.pt",
+                        "value": "99999"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "Dra. Remedios"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/9999999",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "9999999",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/entity-id",
+                        "value": "9999999"
+                    }
+                ],
+                "name": "CS Exemplo"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/78e24234",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "78e24234",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/providing-entity-id",
+                        "value": "78e24234"
+                    }
+                ],
+                "name": "LABORATÓRIO"
+            }
+        }
+    ]
+}

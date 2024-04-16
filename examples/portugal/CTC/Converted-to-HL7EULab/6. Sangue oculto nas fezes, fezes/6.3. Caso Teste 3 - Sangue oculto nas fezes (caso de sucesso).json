@@ -1,0 +1,580 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-631",
+  "identifier": {
+    "system": "https://spms.min-saude.pt/bdnr/identifiers/report",
+    "value": "12345"
+  },
+  "timestamp": "2022-10-04T11:45:33+01:00",
+  "type": "document",
+  "entry": [
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/Composition/101631-comp",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "101631-comp",
+        "meta": {
+          "security": [
+            {
+              "code": "R",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "display": "Restricted"
+            }
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "DRESP",
+              "system": "http://www.acss.min-saude.pt/mcdt/valueset/report-types",
+              "display": "Diagnostic Report for ESP"
+            }
+          ]
+        },
+        "title": "Diagnostic Report for ESP",
+        "subject": {
+          "reference": "Patient/987654321"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "A",
+                "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas",
+                "display": "Análises Clínicas"
+              },
+              {
+                "code": "LAB",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "date": "2022-10-04T11:45:33+01:00",
+        "author": [
+          {
+            "reference": "Practitioner/99999",
+            "display": "Dra. Remedios"
+          }
+        ],
+        "section": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "26436-6",
+                  "system": "http://loinc.org",
+                  "display": "Laboratory studies (set)"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Observation/item-631-1"
+              },
+              {
+                "reference": "Observation/item-631-2"
+              },
+              {
+                "reference": "Observation/item-631-3"
+              }
+            ],
+            "title": "Laboratory studies"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/Patient/987654321",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "987654321",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "HC",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "Health Card Number"
+                }
+              ],
+              "text": "SNS"
+            },
+            "system": "http://spms.min-saude.pt/rnu/identifiers/patient-id",
+            "value": "987654321"
+          }
+        ],
+        "name": [
+          {
+            "text": "PAULO EXEMPLO DE NOME DA SILVA"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-01-01",
+        "address": [
+          {
+            "text": "Rua de Exemplo, nº 99 9999-999 EXEMPLO"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/DiagnosticReport/101631",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "101631",
+        "meta": {
+          "security": [
+            {
+              "code": "R",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "display": "Restricted"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+            "valueReference": {
+              "reference": "Composition/101631-comp"
+            }
+          }
+        ],
+        "basedOn": [
+          {
+            "identifier": {
+              "system": "https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id",
+              "value": "777881234"
+            }
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "A",
+                "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas",
+                "display": "Análises Clínicas"
+              },
+              {
+                "code": "LAB",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "DRESP",
+              "system": "http://www.acss.min-saude.pt/mcdt/valueset/report-types",
+              "display": "Diagnostic Report for ESP"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/987654321"
+        },
+        "issued": "2022-10-04T11:45:33+01:00",
+        "performer": [
+          {
+            "reference": "Organization/78e24234",
+            "display": "LABORATÓRIO"
+          },
+          {
+            "reference": "Practitioner/99999",
+            "display": "Dra. Remedios"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/item-631-1"
+          },
+          {
+            "reference": "Observation/item-631-2"
+          },
+          {
+            "reference": "Observation/item-631-3"
+          }
+        ],
+        "conclusion": "<conclusão>"
+      }
+    },
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-631-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "item-631-1",
+        "valueQuantity": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation",
+              "valueQuantity": {
+                "value": 3,
+                "code": "ug/g",
+                "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                "unit": "µg/g"
+              }
+            }
+          ],
+          "value": 3,
+          "code": "ug/g",
+          "system": "http://unitsofmeasure.org",
+          "unit": "µg/g"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "27396-1",
+              "system": "http://loinc.org",
+              "display": "Hemoglobin.gastrointestinal [Mass/mass] in Stool"
+            },
+            {
+              "code": "607.6",
+              "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+              "display": "Sangue oculto nas fezes, fezes"
+            },
+            {
+              "code": "22768",
+              "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+              "display": "Sangue oculto nas fezes, fezes"
+            }
+          ],
+          "text": "Sangue oculto nas fezes"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "260385009",
+                "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                "display": "Negative"
+              }
+            ],
+            "text": "Negativo"
+          }
+        ],
+        "note": [
+          {
+            "text": "1º amostra"
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "code": "83611000052104",
+              "system": "urn:oid:2.16.620.1.101.10.4.6.7",
+              "display": "Turbidimetry technique"
+            }
+          ],
+          "text": "Turbidimetria"
+        },
+        "referenceRange": [
+          {
+            "text": "<10 Negativo"
+          },
+          {
+            "text": "10 - 19 Positivo Fraco"
+          },
+          {
+            "text": "20 - 100 Positivo"
+          },
+          {
+            "text": ">100 Positivo Forte"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/987654321"
+        },
+        "effectiveDateTime": "2022-10-04T11:45:33+01:00",
+        "performer": [
+          {
+            "reference": "Organization/78e24234",
+            "display": "LABORATÓRIO"
+          },
+          {
+            "reference": "Practitioner/99999",
+            "display": "Dra. Remedios"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-631-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "item-631-2",
+        "valueQuantity": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation",
+              "valueQuantity": {
+                "value": 2,
+                "code": "ug/g",
+                "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                "unit": "µg/g"
+              }
+            }
+          ],
+          "value": 2,
+          "code": "ug/g",
+          "system": "http://unitsofmeasure.org",
+          "unit": "µg/g"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "27396-1",
+              "system": "http://loinc.org",
+              "display": "Hemoglobin.gastrointestinal [Mass/mass] in Stool"
+            },
+            {
+              "code": "607.6",
+              "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+              "display": "Sangue oculto nas fezes, fezes"
+            },
+            {
+              "code": "22768",
+              "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+              "display": "Sangue oculto nas fezes, fezes"
+            }
+          ],
+          "text": "Sangue oculto nas fezes"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "260385009",
+                "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                "display": "Negative"
+              }
+            ],
+            "text": "Negativo"
+          }
+        ],
+        "note": [
+          {
+            "text": "2ª amostra"
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "code": "83611000052104",
+              "system": "urn:oid:2.16.620.1.101.10.4.6.7",
+              "display": "Turbidimetry technique"
+            }
+          ],
+          "text": "Turbidimetria"
+        },
+        "referenceRange": [
+          {
+            "text": "<10 Negativo"
+          },
+          {
+            "text": "10 - 19 Positivo Fraco"
+          },
+          {
+            "text": "20 - 100 Positivo"
+          },
+          {
+            "text": ">100 Positivo Forte"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/987654321"
+        },
+        "effectiveDateTime": "2022-10-04T11:45:33+01:00",
+        "performer": [
+          {
+            "reference": "Organization/78e24234",
+            "display": "LABORATÓRIO"
+          },
+          {
+            "reference": "Practitioner/99999",
+            "display": "Dra. Remedios"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-631-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "item-631-3",
+        "valueQuantity": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation",
+              "valueQuantity": {
+                "value": 5,
+                "code": "ug/g",
+                "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                "unit": "µg/g"
+              }
+            }
+          ],
+          "value": 5,
+          "code": "ug/g",
+          "system": "http://unitsofmeasure.org",
+          "unit": "µg/g"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "27396-1",
+              "system": "http://loinc.org",
+              "display": "Hemoglobin.gastrointestinal [Mass/mass] in Stool"
+            },
+            {
+              "code": "607.6",
+              "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+              "display": "Sangue oculto nas fezes, fezes"
+            },
+            {
+              "code": "22768",
+              "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+              "display": "Sangue oculto nas fezes, fezes"
+            }
+          ],
+          "text": "Sangue oculto nas fezes"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "260385009",
+                "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                "display": "Negative"
+              }
+            ],
+            "text": "Negativo"
+          }
+        ],
+        "note": [
+          {
+            "text": "3ª amostra"
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "code": "83611000052104",
+              "system": "urn:oid:2.16.620.1.101.10.4.6.7",
+              "display": "Turbidimetry technique"
+            }
+          ],
+          "text": "Turbidimetria"
+        },
+        "referenceRange": [
+          {
+            "text": "<10 Negativo"
+          },
+          {
+            "text": "10 - 19 Positivo Fraco"
+          },
+          {
+            "text": "20 - 100 Positivo"
+          },
+          {
+            "text": ">100 Positivo Forte"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/987654321"
+        },
+        "effectiveDateTime": "2022-10-04T11:45:33+01:00",
+        "performer": [
+          {
+            "reference": "Organization/78e24234",
+            "display": "LABORATÓRIO"
+          },
+          {
+            "reference": "Practitioner/99999",
+            "display": "Dra. Remedios"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/Practitioner/99999",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "99999",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "MD",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "Medical License number"
+                }
+              ]
+            },
+            "system": "http://www.ordemdosmedicos.pt",
+            "value": "99999"
+          }
+        ],
+        "name": [
+          {
+            "text": "Dra. Remedios"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://spms.min-saude.pt/fhir/Organization/78e24234",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "78e24234",
+        "identifier": [
+          {
+            "system": "http://spms.min-saude.pt/sges/identifiers/providing-entity-id",
+            "value": "78e24234"
+          }
+        ],
+        "name": "LABORATÓRIO"
+      }
+    }
+  ]
+}

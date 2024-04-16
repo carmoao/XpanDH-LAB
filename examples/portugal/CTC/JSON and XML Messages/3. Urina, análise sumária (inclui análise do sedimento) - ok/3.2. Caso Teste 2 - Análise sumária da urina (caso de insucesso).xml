@@ -1,0 +1,899 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="c3b36c20-0fff-44a0-bf48-6ef1b81f45a0"/>
+    <meta>
+        <lastUpdated value="2022-10-05T23:10:00.358+01:00"/>
+        <profile value="http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"/>
+    </meta>
+    <type value="message"/>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+        <resource>
+            <MessageHeader>
+                <id value="ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+                <event>
+                    <system value="http://spms.min-saude.pt/pnb/events"/>
+                    <code value="10705"/>
+                    <display value="MCDT_RESULTS_SYNCHRONIZATION"/>
+                </event>
+                <destination>
+                    <name value="RequiringApp"/>
+                    <endpoint value="SPMS/HEP"/>
+                </destination>
+                <destination>
+                    <name value="BDNR"/>
+                    <endpoint value="SPMS/BDNR"/>
+                </destination>
+                <receiver>
+                    <reference value="Organization/9999999"/>
+                    <display value="CS Exemplo"/>
+                </receiver>
+                <sender>
+                    <reference value="Organization/78e24234"/>
+                    <display value="LABORATÓRIO"/>
+                </sender>
+                <timestamp value="2022-10-05T23:10:00.358+01:00"/>
+                <source>
+                    <name value="CARDIOLOGIC"/>
+                    <endpoint value="101.20.15.12"/>
+                </source>
+                <focus>
+                    <reference value="DiagnosticReport/101"/>
+                </focus>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Patient/987654321"/>
+        <resource>
+            <Patient>
+                <id value="987654321"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="HC"/>
+                            <display value="Health Card Number"/>
+                        </coding>
+                        <text value="SNS"/>
+                    </type>
+                    <system value="http://spms.min-saude.pt/rnu/identifiers/patient-id"/>
+                    <value value="987654321"/>
+                </identifier>
+                <name>
+                    <text value="PAULO EXEMPLO DE NOME DA SILVA"/>
+                </name>
+                <gender value="male"/>
+                <birthDate value="1970-01-01"/>
+                <address>
+                    <text value="Rua de Exemplo, nº 99 9999-999 EXEMPLO"/>
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/DiagnosticReport/101"/>
+        <resource>
+            <DiagnosticReport>
+                <id value="101"/>
+                <meta>
+                    <security>
+                        <system value="http://hl7.org/fhir/v3/Confidentiality"/>
+                        <code value="R"/>
+                        <display value="Restricted"/>
+                    </security>
+                </meta>
+                <basedOn>
+                    <identifier>
+                        <system value="https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id"/>
+                        <value value="777881234"/>
+                    </identifier>
+                </basedOn>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas"/>
+                        <code value="A"/>
+                        <display value="Análises Clínicas"/>
+                    </coding>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v2/0074"/>
+                        <code value="LAB"/>
+                        <display value="Laboratory"/>
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/report-types"/>
+                        <code value="DRESP"/>
+                        <display value="Diagnostic Report for ESP"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/987654321"/>
+                </subject>
+                <issued value="2022-10-04T11:45:33+01:00"/>
+                <performer>
+                    <actor>
+                        <reference value="Organization/78e24234"/>
+                        <display value="LABORATÓRIO"/>
+                    </actor>
+                </performer>
+                <performer>
+                    <role>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="81464008"/>
+                            <display value="Clinical pathologist"/>
+                        </coding>
+                    </role>
+                    <actor>
+                        <reference value="Practitioner/99999"/>
+                        <display value="Dra. Remedios"/>
+                    </actor>
+                </performer>
+                <result>
+                    <reference value="Observation/item-2001000000005034600001"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600002"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600003"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600004"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600005"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600006"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600007"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600008"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600009"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000010"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000011"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000012"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000013"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000014"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000015"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000016"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000017"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000018"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-20010000000050346000019"/>
+                </result>
+                <conclusion value="&lt;conclusão&gt;"/>
+            </DiagnosticReport>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5778-6"/>
+                        <display value="Color of Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Cor, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.9"/>
+                        <code value="40731000284103"/>
+                        <display value="Pale yellow color"/>
+                    </coding>
+                    <text value="Amarelo pálido"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5767-9"/>
+                        <display value="Appearance of Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Aspeto, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.17"/>
+                        <code value="167236000"/>
+                        <display value="Urine looks clear"/>
+                    </coding>
+                    <text value="Límpida"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600003"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5803-2"/>
+                        <display value="pH of Urine by Test strip"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="pH, urina"/>
+                </code>
+                <valueQuantity>
+                    <value value="<5"/>
+                    <unit value="pH"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="[pH]"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600004"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600004"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5811-5"/>
+                        <display value="Specific gravity of Urine by Test strip"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Densidade, urina"/>
+                </code>
+                <valueQuantity>
+                    <value value="1.014"/>
+                    <unit value="Densidade"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="{Specgrav}"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600005"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600005"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="32710-6"/>
+                        <display value="Nitrite [Presence] in Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Nitritos, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260385009"/>
+                        <display value="Negative"/>
+                    </coding>
+                    <text value="Negativo"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600006"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600006"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="2887-8"/>
+                        <display value="Protein [Presence] in Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Proteínas, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260415000"/>
+                        <display value="Not detected"/>
+                    </coding>
+                    <text value="Não detetado"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="2887-8"/>
+                        <display value="Glucose [Presence] in Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Glicose, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260415000"/>
+                        <display value="Not detected"/>
+                    </coding>
+                    <text value="Não detetado"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="33903-6"/>
+                        <display value="Ketones [Presence] in Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Cetonas, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260415000"/>
+                        <display value="Not detected"/>
+                    </coding>
+                    <text value="Não detetado"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600009"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600009"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="33903-6"/>
+                        <display value="Urobilinogen [Presence] in Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Urobilinogénio, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="17621005"/>
+                        <display value="Normal"/>
+                    </coding>
+                    <text value="Normal"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000010"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000010"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="1977-8"/>
+                        <display value="Bilirubin.total [Presence] in Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Bilirubina total, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260415000"/>
+                        <display value="Not detected"/>
+                    </coding>
+                    <text value="Não detetado"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000011"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000011"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="725-2"/>
+                        <display value="Hemoglobin [Presence] in Urine"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Hemoglubina, urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="260415000"/>
+                        <display value="Not detected"/>
+                    </coding>
+                    <text value="Não detetado"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000012"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000012"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="58438-3"/>
+                        <display value="Cells [Type] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Células, no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.5"/>
+                        <code value="4212006"/>
+                        <display value="Epithelial cell"/>
+                    </coding>
+                    <text value="Células Epiteliais"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000013"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000013"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="58438-3"/>
+                        <display value="Cells [Type] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Células, no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.5"/>
+                        <code value="52501007"/>
+                        <display value="Leukocyte"/>
+                    </coding>
+                    <text value="Leucócitos"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000014"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000014"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="58438-3"/>
+                        <display value="Cells [Type] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Células, no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.5"/>
+                        <code value="41898006"/>
+                        <display value="Erythrocyte"/>
+                    </coding>
+                    <text value="Eritrócitos"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000015"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000015"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5782-8"/>
+                        <display value="Crystals [type] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Cristais, no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.11"/>
+                        <code value="250456004"/>
+                        <display value="Urate crystal"/>
+                    </coding>
+                    <text value="Cristal de urato"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000016"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000016"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="58436-7"/>
+                        <display value="Casts [Type] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Cilindros, no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.4"/>
+                        <code value="250456004"/>
+                        <display value="Urine microscopy: hyaline casts"/>
+                    </coding>
+                    <text value="Microscopia de urina: cilindros hialinos"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000017"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000017"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5787-7"/>
+                        <display value="Epithelial cells [#/area] in Urine sediment by Microscopy high power field"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Células epiteliais, no sedimento urinário"/>
+                </code>
+                <valueQuantity>
+                    <value value="4"/>
+                    <unit value="/campo"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="/{field}"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000018"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000018"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="5787-7"/>
+                        <display value="Leukocytes [#/area] in Urine sediment by Microscopy high power field"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Leucócitos, no sedimento urinário"/>
+                </code>
+                <valueQuantity>
+                    <value value="<1"/>
+                    <unit value="/campo"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="/{field}"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-20010000000050346000019"/>
+        <resource>
+            <Observation>
+                <id value="item-20010000000050346000019"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="13945-1"/>
+                        <display value="Erythrocytes [#/area] in Urine sediment by Microscopy high power field"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="627.0"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="22954"/>
+                        <display value="Urina, análise sumária (inclui análise do sedimento)"/>
+                    </coding>
+                    <text value="Eritrócitos, no sedimento urinário"/>
+                </code>
+                <valueQuantity>
+                    <value value="1"/>
+                    <comparator value="&lt;"/>
+                    <unit value="/campo"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="/{field}"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Practitioner/99999"/>
+        <resource>
+            <Practitioner>
+                <id value="99999"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="MD"/>
+                            <display value="Medical License number"/>
+                        </coding>
+                    </type>
+                    <system value="http://www.ordemdosmedicos.pt"/>
+                    <value value="99999"/>
+                </identifier>
+                <name>
+                    <text value="Dra. Remedios"/>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/9999999"/>
+        <resource>
+            <Organization>
+                <id value="9999999"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/entity-id"/>
+                    <value value="9999999"/>
+                </identifier>
+                <name value="CS Exemplo"/>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/78e24234"/>
+        <resource>
+            <Organization>
+                <id value="78e24234"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/providing-entity-id"/>
+                    <value value="78e24234"/>
+                </identifier>
+                <name value="LABORATÓRIO"/>
+            </Organization>
+        </resource>
+    </entry>
+</Bundle>

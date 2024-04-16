@@ -1,0 +1,837 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="c3b36c20-0fff-44a0-bf48-6ef1b81f45a0"/>
+    <meta>
+        <lastUpdated value="2022-10-05T23:10:00.358+01:00"/>
+         <profile value="http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"/>
+    </meta>
+    <type value="message"/>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+        <resource>
+            <MessageHeader>
+                <id value="ac185937-cc34-4e42-9459-ae5e1306c34d"/>
+                <event>
+                    <system value="http://spms.min-saude.pt/pnb/events"/>
+                    <code value="10705"/>
+                    <display value="MCDT_RESULTS_SYNCHRONIZATION"/>
+                </event>
+                <destination>
+                    <name value="RequiringApp"/>
+                    <endpoint value="SPMS/HEP"/>
+                </destination>
+                <destination>
+                    <name value="BDNR"/>
+                    <endpoint value="SPMS/BDNR"/>
+                </destination>
+                <receiver>
+                    <reference value="Organization/9999999"/>
+                    <display value="CS Exemplo"/>
+                </receiver>
+                <sender>
+                    <reference value="Organization/78e24234"/>
+                    <display value="LABORATÓRIO"/>
+                </sender>
+                <timestamp value="2022-10-05T23:10:00.358+01:00"/>
+                <source>
+                    <name value="CARDIOLOGIC"/>
+                    <endpoint value="101.20.15.12"/>
+                </source>
+                <focus>
+                    <reference value="DiagnosticReport/101"/>
+                </focus>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Patient/987654321"/>
+        <resource>
+            <Patient>
+                <id value="987654321"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="HC"/>
+                            <display value="Health Card Number"/>
+                        </coding>
+                        <text value="SNS"/>
+                    </type>
+                    <system value="http://spms.min-saude.pt/rnu/identifiers/patient-id"/>
+                    <value value="987654321"/>
+                </identifier>
+                <name>
+                    <text value="PAULO EXEMPLO DE NOME DA SILVA"/>
+                </name>
+                <gender value="male"/>
+                <birthDate value="1970-01-01"/>
+                <address>
+                    <text value="Rua de Exemplo, nº 99 9999-999 EXEMPLO"/>
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/DiagnosticReport/101"/>
+        <resource>
+            <DiagnosticReport>
+                <id value="101"/>
+                <meta>
+                    <security>
+                        <system value="http://hl7.org/fhir/v3/Confidentiality"/>
+                        <code value="R"/>
+                        <display value="Restricted"/>
+                    </security>
+                </meta>
+                <basedOn>
+                    <identifier>
+                        <system value="https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id"/>
+                        <value value="777881234"/>
+                    </identifier>
+                </basedOn>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas"/>
+                        <code value="A"/>
+                        <display value="Análises Clínicas"/>
+                    </coding>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v2/0074"/>
+                        <code value="LAB"/>
+                        <display value="Laboratory"/>
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/mcdt/valueset/report-types"/>
+                        <code value="DRESP"/>
+                        <display value="Diagnostic Report for ESP"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/987654321"/>
+                </subject>
+                <issued value="2022-10-04T11:45:33+01:00"/>
+                <performer>
+                    <actor>
+                        <reference value="Organization/78e24234"/>
+                        <display value="LABORATÓRIO"/>
+                    </actor>
+                </performer>
+                <performer>
+                    <role>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="81464008"/>
+                            <display value="Clinical pathologist"/>
+                        </coding>
+                    </role>
+                    <actor>
+                        <reference value="Practitioner/99999"/>
+                        <display value="Dra. Remedios"/>
+                    </actor>
+                </performer>
+                <result>
+                    <reference value="Observation/item-2001000000005034600001"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600002"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600003"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600004"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600005"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600006"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600007"/>
+                </result>
+                <result>
+                    <reference value="Observation/item-2001000000005034600008"/>
+                </result>
+                <conclusion value="&lt;conclusão&gt;"/>
+            </DiagnosticReport>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600001"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="66746-9"/>
+                        <display value="Amostra"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Amostra"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.15"/>
+                        <code value="122575003"/>
+                        <display value="Urine specimen"/>
+                    </coding>
+                    <text value="Urina"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600002"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="20453-7"/>
+                        <display value="Epithelial cells [Presence] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Células Epiteliais no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="27768009"/>
+                        <display value="Some"/>
+                    </coding>
+                    <text value="Alguma(s)"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600003"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="20455-2"/>
+                        <display value="Leukocytes [Presence] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Leucócitos no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="89292003"/>
+                        <display value="Rare"/>
+                    </coding>
+                    <text value="Raro(s)"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600004"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600004"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="32776-7"/>
+                        <display value="Erythrocytes [Presence] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Eritrócitos no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="89292003"/>
+                        <display value="Numerous"/>
+                    </coding>
+                    <text value="Muitos"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600005"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600005"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="25145-4"/>
+                        <display value="Bacteria [Presence] in Urine sediment by Light microscopy"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Bactérias no sedimento da urina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.8"/>
+                        <code value="52101004"/>
+                        <display value="Present"/>
+                    </coding>
+                    <text value="Presente(s)"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600006"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600006"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="664-3"/>
+                        <display value="Microscopic observation [Identifier] in Specimen by Gram stain"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Gram"/>
+                </code>
+                <valueString value="Muitos bacilos Gram-negativos"/>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="6463-4"/>
+                        <display value="Bacteria identified in Specimen by Culture"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Identificação de bactérias"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.13"/>
+                        <code value="112283007"/>
+                        <display value="Escherichia coli"/>
+                    </coding>
+                    <text value="Escherichia coli"/>
+                </valueCodeableConcept>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600007.1"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600007.2"/>
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.1"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007.1"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="564-5"/>
+                        <display value="Colony count [#] in Specimen by Visual count"/>
+                    </coding>
+                    <text value="Contagem de colónias"/>
+                </code>
+                <valueQuantity>
+                    <value value="100000"/>
+                    <comparator value="&gt;"/>
+                    <unit value="#"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="{#}"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007.2"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="29576-6"/>
+                        <display value="Bacterial susceptibility panel"/>
+                    </coding>
+                    <text value="Antibiograma"/>
+                </code>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600007.2.1"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600007.2.2"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600007.2.3"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600007.2.4"/>
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.1"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007.2.1"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="18861-5"/>
+                        <display value="Amoxicillin"/>
+                    </coding>
+                    <text value="Amoxicilina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="30714006"/>
+                        <display value="Resistant"/>
+                    </coding>
+                    <text value="R"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.2"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007.2.2"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="51724-3"/>
+                        <display value="Cefuroxime"/>
+                    </coding>
+                    <text value="Cefuroxima"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="30714006"/>
+                        <display value="Resistant"/>
+                    </coding>
+                    <text value="R"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.3"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007.2.3"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="18893-8"/>
+                        <display value="cefTAZidime"/>
+                    </coding>
+                    <text value="Ceftazidima"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="131196009"/>
+                        <display value="Susceptible"/>
+                    </coding>
+                    <text value="S"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.4"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600007.2.4"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="18886-2"/>
+                        <display value="Cefotaxime"/>
+                    </coding>
+                    <text value="Cefotaxima"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="131196009"/>
+                        <display value="Susceptible"/>
+                    </coding>
+                    <text value="S"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="6463-4"/>
+                        <display value="Bacteria identified in Specimen by Culture"/>
+                    </coding>
+                    <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado"/>
+                        <code value="1265.8"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                     <coding>
+                        <system value="http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns"/>
+                        <code value="26498"/>
+                        <display value="Urina - exame direto, cultural, identificação e TSA (Urocultura)"/>
+                    </coding>
+                    <text value="Identificação de bactérias"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.13"/>
+                        <code value="73457008"/>
+                        <display value="Proteus mirabilis"/>
+                    </coding>
+                    <text value="Proteus mirabilis"/>
+                </valueCodeableConcept>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600008.1"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600008.2"/>
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.1"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008.1"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="564-5"/>
+                        <display value="Colony count [#] in Specimen by Visual count"/>
+                    </coding>
+                    <text value="Contagem de colónias"/>
+                </code>
+                <valueQuantity>
+                    <value value="1000000"/>
+                    <comparator value="&gt;"/>
+                    <unit value="#"/>
+                    <system value="urn:oid:2.16.620.1.101.10.4.8.3"/>
+                    <code value="{#}"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008.2"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="29576-6"/>
+                        <display value="Bacterial susceptibility panel"/>
+                    </coding>
+                    <text value="Antibiograma"/>
+                </code>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600008.2.1"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600008.2.2"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600008.2.3"/>
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member"/>
+                    <target>
+                        <reference value="Observation/item-2001000000005034600008.2.4"/>
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.1"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008.2.1"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="18861-5"/>
+                        <display value="Amoxicillin"/>
+                    </coding>
+                    <text value="Amoxicilina"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="30714006"/>
+                        <display value="Resistant"/>
+                    </coding>
+                    <text value="R"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.2"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008.2.2"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="51724-3"/>
+                        <display value="Cefuroxime"/>
+                    </coding>
+                    <text value="Cefuroxima"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="30714006"/>
+                        <display value="Resistant"/>
+                    </coding>
+                    <text value="R"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.3"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008.2.3"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="18893-8"/>
+                        <display value="cefTAZidime"/>
+                    </coding>
+                    <text value="Ceftazidima"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="131196009"/>
+                        <display value="Susceptible"/>
+                    </coding>
+                    <text value="S"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.4"/>
+        <resource>
+            <Observation>
+                <id value="item-2001000000005034600008.2.4"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.2"/>
+                        <code value="18886-2"/>
+                        <display value="Cefotaxime"/>
+                    </coding>
+                    <text value="Cefotaxima"/>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.620.1.101.10.4.6.18"/>
+                        <code value="131196009"/>
+                        <display value="Susceptible"/>
+                    </coding>
+                    <text value="S"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Practitioner/99999"/>
+        <resource>
+            <Practitioner>
+                <id value="99999"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="MD"/>
+                            <display value="Medical License number"/>
+                        </coding>
+                    </type>
+                    <system value="http://www.ordemdosmedicos.pt"/>
+                    <value value="99999"/>
+                </identifier>
+                <name>
+                    <text value="Dra. Remedios"/>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/9999999"/>
+        <resource>
+            <Organization>
+                <id value="9999999"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/entity-id"/>
+                    <value value="9999999"/>
+                </identifier>
+                <name value="CS Exemplo"/>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://spms.min-saude.pt/fhir/Organization/78e24234"/>
+        <resource>
+            <Organization>
+                <id value="78e24234"/>
+                <identifier>
+                    <system value="http://spms.min-saude.pt/sges/identifiers/providing-entity-id"/>
+                    <value value="78e24234"/>
+                </identifier>
+                <name value="LABORATÓRIO"/>
+            </Organization>
+        </resource>
+    </entry>
+</Bundle>

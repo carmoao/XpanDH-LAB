@@ -1,0 +1,930 @@
+{
+    "resourceType": "Bundle",
+    "id": "c3b36c20-0fff-44a0-bf48-6ef1b81f45a0",
+    "meta": {
+        "lastUpdated": "2022-10-05T23:10:00.358+01:00",
+        "profile": [
+             "http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1-6-1"
+        ]
+    },
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "ac185937-cc34-4e42-9459-ae5e1306c34d",
+                "event": {
+                    "system": "http://spms.min-saude.pt/pnb/events",
+                    "code": "10705",
+                    "display": "MCDT_RESULTS_SYNCHRONIZATION"
+                },
+                "destination": [
+                    {
+                        "name": "RequiringApp",
+                        "endpoint": "SPMS/HEP"
+                    },
+                    {
+                        "name": "BDNR",
+                        "endpoint": "SPMS/BDNR"
+                    }
+                ],
+                "receiver": {
+                    "reference": "Organization/9999999",
+                    "display": "CS Exemplo"
+                },
+                "sender": {
+                    "reference": "Organization/78e24234",
+                    "display": "LABORATÓRIO"
+                },
+                "timestamp": "2022-10-05T23:10:00.358+01:00",
+                "source": {
+                    "name": "CARDIOLOGIC",
+                    "endpoint": "101.20.15.12"
+                },
+                "focus": [
+                    {
+                        "reference": "DiagnosticReport/101"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Patient/987654321",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "987654321",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "HC",
+                                    "display": "Health Card Number"
+                                }
+                            ],
+                            "text": "SNS"
+                        },
+                        "system": "http://spms.min-saude.pt/rnu/identifiers/patient-id",
+                        "value": "987654321"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "PAULO EXEMPLO DE NOME DA SILVA"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1970-01-01",
+                "address": [
+                    {
+                        "text": "Rua de Exemplo, nº 99 9999-999 EXEMPLO"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/DiagnosticReport/101",
+            "resource": {
+                "resourceType": "DiagnosticReport",
+                "id": "101",
+                "meta": {
+                    "security": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/Confidentiality",
+                            "code": "R",
+                            "display": "Restricted"
+                        }
+                    ]
+                },
+                "basedOn": [
+                    {
+                        "identifier": {
+                            "system": "https://spms.min-saude.pt/bdnr/identifiers/mcdt-request-id",
+                            "value": "777881234"
+                        }
+                    }
+                ],
+                "status": "final",
+                "category": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas",
+                            "code": "A",
+                            "display": "Análises Clínicas"
+                        },
+                        {
+                            "system": "http://hl7.org/fhir/v2/0074",
+                            "code": "LAB",
+                            "display": "Laboratory"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/report-types",
+                            "code": "DRESP",
+                            "display": "Diagnostic Report for ESP"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/987654321"
+                },
+                "issued": "2022-10-04T11:45:33+01:00",
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "Organization/78e24234",
+                            "display": "LABORATÓRIO"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "81464008",
+                                    "display": "Clinical pathologist"
+                                }
+                            ]
+                        },
+                        "actor": {
+                            "reference": "Practitioner/99999",
+                            "display": "Dra. Remedios"
+                        }
+                    }
+                ],
+                "result": [
+                    {
+                        "reference": "Observation/item-2001000000005034600001"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600002"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600003"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600004"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600005"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600006"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600007"
+                    },
+                    {
+                        "reference": "Observation/item-2001000000005034600008"
+                    }
+                ],
+                "conclusion": "<conclusão>"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600001",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600001",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "66746-9",
+                            "display": "Amostra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Amostra"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.15",
+                            "code": "122575003",
+                            "display": "Urine specimen"
+                        }
+                    ],
+                    "text": "Urina"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600002",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600002",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "20453-7",
+                            "display": "Epithelial cells [Presence] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Células Epiteliais no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "27768009",
+                            "display": "Some"
+                        }
+                    ],
+                    "text": "Alguma(s)"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600003",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600003",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "20455-2",
+                            "display": "Leukocytes [Presence] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Leucócitos no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "89292003",
+                            "display": "Rare"
+                        }
+                    ],
+                    "text": "Raro(s)"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600004",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600004",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "32776-7",
+                            "display": "Erythrocytes [Presence] in Urine sediment by Light microscopy"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Eritrócitos no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "89292003",
+                            "display": "Numerous"
+                        }
+                    ],
+                    "text": "Muitos"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600005",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600005",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "25145-4",
+                            "display": "Bacteria [Presence] in Urine sediment by Light microscopy"
+                        }
+                    ],
+                    "text": "Bactérias no sedimento da urina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.8",
+                            "code": "52101004",
+                            "display": "Present"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Presente(s)"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600006",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600006",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "664-3",
+                            "display": "Microscopic observation [Identifier] in Specimen by Gram stain"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Gram"
+                },
+                "valueString": "Muitos bacilos Gram-negativos"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "6463-4",
+                            "display": "Bacteria identified in Specimen by Culture"
+                        }
+                    ],
+                    "text": "Identificação de bactérias"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.13",
+                            "code": "112283007",
+                            "display": "Escherichia coli"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Escherichia coli"
+                },
+                "related": [
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600007.1"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600007.2"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "564-5",
+                            "display": "Colony count [#] in Specimen by Visual count"
+                        }
+                    ],
+                    "text": "Contagem de colónias"
+                },
+                "valueQuantity": {
+                    "value": 100000,
+                    "comparator": ">",
+                    "unit": "#",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "{#}"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007.2",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "29576-6",
+                            "display": "Bacterial susceptibility panel"
+                        }
+                    ],
+                    "text": "Antibiograma"
+                },
+                "related": [
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600007.2.1"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600007.2.2"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600007.2.3"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600007.2.4"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007.2.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "18861-5",
+                            "display": "Amoxicillin"
+                        }
+                    ],
+                    "text": "Amoxicilina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "30714006",
+                            "display": "Resistant"
+                        }
+                    ],
+                    "text": "R"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.2",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007.2.2",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "51724-3",
+                            "display": "Cefuroxime"
+                        }
+                    ],
+                    "text": "Cefuroxima"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "30714006",
+                            "display": "Resistant"
+                        }
+                    ],
+                    "text": "R"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.3",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007.2.3",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "18893-8",
+                            "display": "cefTAZidime"
+                        }
+                    ],
+                    "text": "Ceftazidima"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "131196009",
+                            "display": "Susceptible"
+                        }
+                    ],
+                    "text": "S"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600007.2.4",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600007.2.4",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "18886-2",
+                            "display": "Cefotaxime"
+                        }
+                    ],
+                    "text": "Cefotaxima"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "131196009",
+                            "display": "Susceptible"
+                        }
+                    ],
+                    "text": "S"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "6463-4",
+                            "display": "Bacteria identified in Specimen by Culture"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-convencionado",
+                            "code": "1265.8",
+                            "display": "AmosUrina - exame direto, cultural, identificação e TSA (Urocultura)tra"
+                        },
+                        {
+                            "system": "http://www.acss.min-saude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-e-terapeutica/codigo-sns",
+                            "code": "26498",
+                            "display": "Urina - exame direto, cultural, identificação e TSA (Urocultura)"
+                        }
+                    ],
+                    "text": "Identificação de bactérias"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.13",
+                            "code": "73457008",
+                            "display": "Proteus mirabilis"
+                        }
+                    ],
+                    "text": "Proteus mirabilis"
+                },
+                "related": [
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600008.1"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600008.2"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "564-5",
+                            "display": "Colony count [#] in Specimen by Visual count"
+                        }
+                    ],
+                    "text": "Contagem de colónias"
+                },
+                "valueQuantity": {
+                    "value": 1000000,
+                    "comparator": ">",
+                    "unit": "#",
+                    "system": "urn:oid:2.16.620.1.101.10.4.8.3",
+                    "code": "{#}"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008.2",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "29576-6",
+                            "display": "Bacterial susceptibility panel"
+                        }
+                    ],
+                    "text": "Antibiograma"
+                },
+                "related": [
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600008.2.1"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600008.2.2"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600008.2.3"
+                        }
+                    },
+                    {
+                        "type": "has-member",
+                        "target": {
+                            "reference": "Observation/item-2001000000005034600008.2.4"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.1",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008.2.1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "18861-5",
+                            "display": "Amoxicillin"
+                        }
+                    ],
+                    "text": "Amoxicilina"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "30714006",
+                            "display": "Resistant"
+                        }
+                    ],
+                    "text": "R"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.2",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008.2.2",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "51724-3",
+                            "display": "Cefuroxime"
+                        }
+                    ],
+                    "text": "Cefuroxima"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "30714006",
+                            "display": "Resistant"
+                        }
+                    ],
+                    "text": "R"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.3",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008.2.3",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "18893-8",
+                            "display": "cefTAZidime"
+                        }
+                    ],
+                    "text": "Ceftazidima"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "131196009",
+                            "display": "Susceptible"
+                        }
+                    ],
+                    "text": "S"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item-2001000000005034600008.2.4",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "item-2001000000005034600008.2.4",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.2",
+                            "code": "18886-2",
+                            "display": "Cefotaxime"
+                        }
+                    ],
+                    "text": "Cefotaxima"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.620.1.101.10.4.6.18",
+                            "code": "131196009",
+                            "display": "Susceptible"
+                        }
+                    ],
+                    "text": "S"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Practitioner/99999",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "99999",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "MD",
+                                    "display": "Medical License number"
+                                }
+                            ]
+                        },
+                        "system": "http://www.ordemdosmedicos.pt",
+                        "value": "99999"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "Dra. Remedios"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/9999999",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "9999999",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/entity-id",
+                        "value": "9999999"
+                    }
+                ],
+                "name": "CS Exemplo"
+            }
+        },
+        {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/78e24234",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "78e24234",
+                "identifier": [
+                    {
+                        "system": "http://spms.min-saude.pt/sges/identifiers/providing-entity-id",
+                        "value": "78e24234"
+                    }
+                ],
+                "name": "LABORATÓRIO"
+            }
+        }
+    ]
+}
