@@ -1,0 +1,244 @@
+      <ClinicalDocument xmlns="urn:hl7-org:v3">
+        <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+        <!-- Center that publishes (the unique identifier) and unique document identifier of the center-->
+        <id root="E17027066" extension="LABENOU_1"/>
+        <code code="LABE" codeSystem="2.16.840.1.113883.4.292.30.13.2" codeSystemName="Official Report Type Table"/>
+        <!-- Data discharge document -->
+        <effectiveTime value="20180306010101"/>
+        <!-- Confidentiality (always N) -->
+        <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+        <!-- UP code of the publishing center-->
+        <setId root="2.16.840.1.113883.4.292.10.12.6" extension="00130"/>
+        <recordTarget>
+          <patientRole>
+            <!-- DNI -->
+            <id root="1.3.6.1.4.1.19126.3" extension="53077144K" assigningAuthorityName="DNI"/>
+            <!-- CIP -->
+            <id root="2.16.840.1.113883.4.292.10.1" extension="ROEZ0620427014" assigningAuthorityName="CIP"/>
+            <!-- Country residence -->
+            <addr>
+              <state>ES</state>
+            </addr>
+            <!-- First and last name -->
+            <patient>
+              <name>
+                <given>Josep</given>
+                <family>Rodriguez</family>
+                <family>Ezque</family>
+              </name>
+              <!-- Sex: 0 Man, 1 Woman, 3 Undefined -->
+              <administrativeGenderCode code="0" codeSystem="2.16.840.1.113883.12.1" codeSystemName="Sex"/>
+              <!-- date of birth -->
+              <birthTime value="19851023000000"/>
+            </patient>
+            <!-- Publisher (in which the patient is patient)-->
+            <providerOrganization classCode="ORG" determinerCode="INSTANCE">
+              <!-- Publishing center (where the patient is a patient) -->
+              <id root="2.16.840.1.113883.4.292.10.12" extension="E17027066"/>
+              <!--UP that publishes (in which the patient is patient) -->
+              <id root="2.16.840.1.113883.4.292.10.12.6" extension="00130"/>
+              <!-- Welfare service -->
+              <asOrganizationPartOf classCode="PART">
+                <id root="2.16.840.1.113883.4.292.10.14" extension="5S001"/>
+              </asOrganizationPartOf>
+            </providerOrganization>
+          </patientRole>
+        </recordTarget>
+        <!-- Professional blog author document and origin (machine) -->
+        <author typeCode="AUT" contextControlCode="OP">
+          <!-- Document author signature date -->
+          <time value="20180306110000"/>
+          <assignedAuthor classCode="ASSIGNED">
+            <id nullFlavor="NI"/>
+            <!-- Data source system (machine)-->
+            <telecom value="salutms.cat"/>
+            <!-- Filler -->
+            <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+              <!-- Filler center -->
+              <id root="2.16.840.1.113883.4.292.10.12" extension="E17027066"/>
+              <!-- UP filler -->
+              <id root="2.16.840.1.113883.4.292.10.12.6" extension="00130"/>
+              <!-- Care service filler -->
+              <id root="2.16.840.1.113883.4.292.10.14" extension="5S001"/>
+              <!-- Clinical history number of the patient at the health center that made the report -->
+              <id root="2.16.724.4.9.10.8" extension="22222"/>
+            </representedOrganization>
+          </assignedAuthor>
+        </author>
+        <!-- Keep information (where resides physically) -->
+        <custodian typeCode="CST">
+          <assignedCustodian classCode="ASSIGNED">
+            <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+              <!-- Information custody center -->
+              <id root="2.16.840.1.113883.4.292.10.12" extension="E17027066"/>
+              <!-- UP guarding the information -->
+              <id root="2.16.840.1.113883.4.292.10.12.6" extension="00130"/>
+            </representedCustodianOrganization>
+          </assignedCustodian>
+        </custodian>
+        <!--CCAA responsible of the patient -->
+        <participant contextControlCode="OP" typeCode="COV">
+          <associatedEntity classCode="GUAR">
+            <!--CCAA responsible for patient insurance -->
+            <code codeSystem="1.0.3166.2" code="ES-CT" displayName="Catalunya"/>
+          </associatedEntity>
+        </participant>
+        <!-- Placer -->
+        <participant typeCode="REF">
+          <associatedEntity classCode="PROV">
+            <scopingOrganization>
+              <asOrganizationPartOf>
+                <wholeOrganization>
+                  <!-- Placer center -->
+                  <id root="2.16.840.1.113883.4.292.10.12" extension="E17027066"/>
+                  <!-- UP placer -->
+                  <id root="2.16.840.1.113883.4.292.10.12.6" extension="00130"/>
+                  <!-- Placer care service -->
+                  <id root="2.16.840.1.113883.4.292.10.14" extension="5S001"/>
+                  <!-- Clinical history number of the patient at the health center that requested the report  -->
+                  <id root="2.16.724.4.9.10.8" extension="11111"/>
+                </wholeOrganization>
+              </asOrganizationPartOf>
+            </scopingOrganization>
+          </associatedEntity>
+        </participant>
+        <!--APND = Discharge / RPLC = Modification / XFRM = Delete-->
+        <relatedDocument typeCode="APND">
+          <parentDocument>
+            <id root="2.16.840.1.113883.4.292.30.13.6" extension="0"/>
+          </parentDocument>
+        </relatedDocument>
+        <component>
+          <structuredBody>
+            <component>
+              <!--PDF in B64 (mandatory) -->
+              <section>
+                <entry>
+                  <observationMedia classCode="OBS" moodCode="EVN">
+                    <value representation="B64" mediaType="application/pdf">PDFB64</value>
+                  </observationMedia>
+                </entry>
+              </section>
+            </component>
+            <component>
+              <!-- Diagnosis or reason for consultation for which the test is performed (optional)-->
+              <section>
+                <entry>
+                  <observation classCode="OBS" moodCode="EVN">
+                    <!--Economic regime (01 is that of social security) -->
+                    <id root="2.16.840.1.113883.12.72" extension="01"/>
+                    <!-- Diagnostic type (always 'D')-->
+                    <code code="D" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diagnostic"/>
+                    <!-- Date and time of diagnostic-->
+                    <effectiveTime value="20121001220800+0100"/>
+                    <!-- Diagnosis and catalog-->
+                    <value xsi:type="CE" code="E78.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="CIM-10-MC" codeSystemVersion="1" displayName="Hipercolesterolemia"/>
+                  </observation>
+                </entry>
+              </section>
+            </component>
+            <component>
+              <!-- Tests -->
+              <section>
+                <!-- Within this block section, create as many entry blocks as there are tests -->
+                <entry>
+                  <observation classCode="OBS" moodCode="EVN">
+                    <!--test code (LOINC) (Required) + OID Catalog (Required) + version (Optional) and description of the test-->
+                    <code code="54236-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" codeSystemVersion="2.63" displayName="Cortisol ritme a les 24h en serum o plasma"/>
+                    <!-- Test specific comment (Optional) -->
+                    <text>Test specific comment</text>
+                    <effectiveTime value="20121001220800+0100"/>
+                    <!--Example of numerical value with units and range-->
+                    <value xsi:type="PQ" value="190" unit="mcg/dL"/>
+                    <!-- Author of the test-->
+                    <author>
+                      <!-- Date and time of obtaining the result (Mandatory)-->
+                      <time value="20121024020800+0100"/>
+                      <!-- Details of the professional author of the test -->
+                      <assignedAuthor>
+                        <!--Professional collegiate number author of the diagnosis / document-->
+                        <id root="2.16.840.1.113883.4.292.10.2" extension="08235486" assigningAuthorityName="Numero de colegiat"/>
+                        <!-- DNI of professional-->
+                        <id root="1.3.6.1.4.1.19126.3" extension="43555564G" assigningAuthorityName="DNI/NIF"/>
+                        <!-- Rol Professional -->
+                        <code codeSystem="2.16.724.4.9.50.5" code="MD" displayName="metge" codeSystemName="Grup professional de lautor del document"/>
+                        <!--Name and surnames of the professional-->
+                        <assignedPerson>
+                          <name>
+                            <given>Joan</given>
+                            <family>Romagosa</family>
+                            <family>Garcia</family>
+                          </name>
+                        </assignedPerson>
+                      </assignedAuthor>
+                    </author>
+                    <!-- Range of the result -->
+                    <referenceRange typeCode="REFV">
+                      <observationRange classCode="OBS" moodCode="EVN.CRT">
+                        <value xsi:type="IVL_PQ">
+                          <low value="0"/>
+                          <high value="100"/>
+                        </value>
+                      </observationRange>
+                    </referenceRange>
+                  </observation>
+                </entry>
+				<entry>
+					<observation classCode="OBS" moodCode="EVN"> 
+					<!--test code (LOINC) (Required) + OID Catalog (Required) + version (Optional) and description of the test -->
+						<code code="711-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" codeSystemVersion="2.63" displayName="Cortisol ritme a les 24h en serum o plasma" />
+						<text>Specific comment of the test</text>
+						<effectiveTime value="20121001220800+0100" />
+						<!--Example of text with range -->
+						<value xsi:type="PQ" value="190" unit="x10^3_u/mcL" />
+						<author> 
+							<!-- Date and time of obtaining the result (Mandatory) -->
+							<time value="20121024020800+0100" /> 
+							<!-- Details of the professional author of the test -->
+							<assignedAuthor>
+							<!--Professional collegiate number author of the diagnosis / document -->
+								<id root="2.16.840.1.113883.4.292.10.2" extension="08235486" assigningAuthorityName="Collegiate number" /> 
+								<!-- DNI of professional -->
+								<id root="1.3.6.1.4.1.19126.3" extension="43555564G" assigningAuthorityName="DNI/NIF" /> 
+								<!-- Rol Professional (Mandatory) -->
+								<code codeSystem="2.16.724.4.9.50.5" code="MD" displayName="metge" codeSystemName="Professional group of author of the document" />
+								<!--Name and surnames of the professional -->
+								<assignedPerson>
+									<name>
+										<given>Joan</given>
+										<family>Romagosa</family>
+										<family>Garcia</family>
+									</name>
+								</assignedPerson>
+							</assignedAuthor>
+						</author>
+						<referenceRange typeCode="REFV">
+							<observationRange classCode="OBS" moodCode="EVN.CRT">
+								<value xsi:type="IVL_PQ">
+									<low value="0"/>
+									<high value="100" />
+								</value>
+							</observationRange>
+						</referenceRange>
+					</observation>
+				</entry>	
+              </section>
+            </component>
+            <component>
+              <!-- General report comment (optional)-->
+              <section>
+                <entry>
+                  <observation classCode="OBS" moodCode="EVN">
+                    <code code="398005008" codeSystem="2.16.840.1.113883.6.96" displayName="General comment of the report"/>
+                    <effectiveTime value="20121001220800+0100"/>
+                    <value xsi:type="ST">General comment of the report</value>
+                  </observation>
+                </entry>
+              </section>
+            </component>
+          </structuredBody>
+        </component>
+      </ClinicalDocument>
+    </lab:publicarLaboratori>
+  </soapenv:Body>
+</soapenv:Envelope>
