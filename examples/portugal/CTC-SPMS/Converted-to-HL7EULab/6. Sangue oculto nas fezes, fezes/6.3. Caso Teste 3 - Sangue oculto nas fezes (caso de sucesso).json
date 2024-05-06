@@ -31,7 +31,7 @@
             }
           ]
         },
-        "title": "Diagnostic Report for ESP",
+        "title": "Caso Teste 3 - Sangue oculto nas fezes (PT)",
         "subject": {
           "reference": "Patient/spms-987654321"
         },
